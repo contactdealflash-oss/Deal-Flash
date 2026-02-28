@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealFlash ⚡ v5</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#080810;--ink2:#0f0f1a;--ink3:#161625;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.13);--snow:#f4f4f8;--fog:rgba(244,244,248,0.3);--mist:rgba(244,244,248,0.6);--fire:#ff2d55;--fire2:#ff6b35;--ice:#00d4ff;--gold:#ffd60a;--jade:#00e676;--r:16px;--r2:24px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ink);color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;overflow-x:hidden;}
+.orb{position:fixed;border-radius:50%;pointer-events:none;filter:blur(130px);z-index:0;}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(255,45,85,0.13),transparent 70%);top:-250px;left:-200px;animation:d1 22s ease-in-out infinite;}
+.o2{width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,255,0.09),transparent 70%);bottom:-200px;right:-200px;animation:d2 28s ease-in-out infinite;}
+@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,50px)}}
+@keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-70px)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,230,118,.4)}50%{opacity:.5;box-shadow:0 0 0 7px rgba(0,230,118,0)}}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes srIn{from{transform:scale(.93) translateY(14px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.hidden{display:none!important;}
+
+/* ===== COUNTRY PAGE ===== */
+#cp{position:fixed;inset:0;z-index:500;background:var(--ink);display:flex;flex-direction:column;align-items:center;padding:3rem 1.5rem 5rem;overflow-y:auto;transition:opacity .6s,transform .6s;}
+#cp.out{opacity:0;transform:scale(1.05);pointer-events:none;}
+.cp-logo{font-size:1.9rem;font-weight:800;letter-spacing:-1px;margin-bottom:.3rem;animation:rise .7s both;}
+/* Emoji global reset */
+.cc-f,.fb,.sp-av{-webkit-text-fill-color:unset!important;background:none!important;background-clip:unset!important;-webkit-background-clip:unset!important;}
+/* Flag image rendering */
+.cc-flag{width:52px;height:52px;margin:0 auto .5rem;display:block;border-radius:50%;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid rgba(255,255,255,.1);transition:transform .3s;}
+.cc:hover .cc-flag{transform:scale(1.15);}
+.cp-logo .f{background:linear-gradient(135deg,var(--fire),var(--fire2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;}
+.cp-logo .i{-webkit-text-fill-color:var(--ice);display:inline;}
+.cp-sub{font-size:.72rem;font-weight:600;color:var(--fog);letter-spacing:3px;text-transform:uppercase;margin-bottom:2.5rem;animation:rise .8s .05s both;}
+.cp-h{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,3.4rem);text-align:center;line-height:1.1;margin-bottom:.6rem;animation:rise .8s .1s both;}
+.cp-h em{font-style:italic;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.cp-p{color:var(--fog);font-size:.95rem;text-align:center;margin-bottom:2.5rem;animation:rise .8s .15s both;}
+.regions{width:100%;max-width:980px;animation:rise .9s .2s both;}
+.rl{font-size:.68rem;font-weight:700;color:var(--fog);text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.rl::before,.rl::after{content:'';flex:1;height:1px;background:var(--line2);}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:.85rem;margin-bottom:2.5rem;}
+.cc{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:var(--r2);padding:1.4rem 1rem 1.1rem;cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);text-align:center;overflow:hidden;}
+.cc::after{content:'';position:absolute;inset:-1px;border-radius:var(--r2);background:linear-gradient(135deg,var(--fire),var(--ice));opacity:0;transition:opacity .3s;z-index:-1;}
+.cc:hover{transform:translateY(-5px) scale(1.02);border-color:transparent;}
+.cc:hover::after{opacity:1;}
+.cc-f{font-size:2.6rem;margin-bottom:.5rem;display:block;transition:transform .3s;-webkit-text-fill-color:initial!important;color:initial!important;font-family:'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif;}
+.cc:hover .cc-f{transform:scale(1.15);}
+.cc-n{font-size:.87rem;font-weight:700;margin-bottom:.2rem;}
+.cc-c{font-size:.68rem;color:var(--fog);}
+.cc-c strong{color:var(--jade);font-weight:700;}
+.cc.soon{opacity:.35;cursor:not-allowed;}
+.cc.soon:hover{transform:none;border-color:var(--line);}
+.cc.soon:hover::after{opacity:0;}
+.sp{position:absolute;top:9px;right:9px;background:var(--ink3);border:1px solid var(--line2);color:var(--fog);font-size:.57rem;padding:2px 6px;border-radius:20px;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+.dp{position:absolute;bottom:9px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;font-size:.6rem;padding:3px 10px;border-radius:20px;white-space:nowrap;font-weight:700;}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:200;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(8,8,16,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--line);}
+.nl{font-weight:800;font-size:1.3rem;letter-spacing:-.5px;cursor:pointer;}
+.nl .f{background:linear-gradient(135deg,var(--fire),var(--fire2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nl .i{-webkit-text-fill-color:var(--ice);}
+.nc{display:flex;align-items:center;gap:.5rem;}
+.fs{display:flex;gap:.25rem;background:var(--ink2);border:1px solid var(--line);border-radius:40px;padding:.28rem .45rem;flex-wrap:wrap;max-width:380px;}
+.fb{background:none;border:none;cursor:pointer;font-size:1rem;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s;opacity:.38;}
+.fb:hover{opacity:1;background:var(--ink3);}
+.fb.on{opacity:1;background:rgba(255,45,85,.18);box-shadow:0 0 0 1.5px var(--fire);}
+.ntab{background:none;border:1px solid var(--line2);cursor:pointer;color:var(--fog);font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:600;padding:.4rem .9rem;border-radius:10px;transition:all .2s;display:flex;align-items:center;gap:.4rem;white-space:nowrap;}
+.ntab:hover{color:var(--snow);}
+.ntab.on{color:var(--fire);background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3);}
+.nr{display:flex;gap:.5rem;align-items:center;}
+.btn{padding:.42rem 1rem;border-radius:10px;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:600;transition:all .2s;}
+.bg{background:transparent;color:var(--mist);border:1px solid var(--line2);}
+.bg:hover{color:var(--snow);}
+.bf{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;}
+.bf:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,45,85,.4);}
+.sib{background:none;border:1px solid var(--line2);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:var(--fog);font-size:1.05rem;}
+.sib:hover{border-color:var(--fire);color:var(--fire);}
+.uav{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--fire2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.78rem;cursor:pointer;border:1.5px solid transparent;transition:all .2s;}
+.uav:hover{border-color:var(--fire);}
+
+/* ===== SEARCH OVERLAY ===== */
+.so{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);display:flex;flex-direction:column;align-items:center;padding-top:7rem;opacity:0;pointer-events:none;transition:opacity .3s;}
+.so.on{opacity:1;pointer-events:all;}
+.sb2{width:90%;max-width:640px;background:var(--ink2);border:1px solid var(--line2);border-radius:20px;display:flex;align-items:center;gap:1rem;padding:1rem 1.4rem;transition:border-color .2s;}
+.so.on .sb2{animation:srIn .3s cubic-bezier(.34,1.56,.64,1);}
+.sb2:focus-within{border-color:rgba(255,45,85,.5);}
+.sb2 input{flex:1;background:none;border:none;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;outline:none;font-weight:500;}
+.sb2 input::placeholder{color:var(--fog);}
+.scl{background:var(--ink3);border:1px solid var(--line);color:var(--fog);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sres{width:90%;max-width:640px;margin-top:.85rem;display:flex;flex-direction:column;gap:.5rem;max-height:52vh;overflow-y:auto;}
+.sri{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:.85rem 1.2rem;display:flex;align-items:center;gap:1rem;cursor:pointer;transition:all .2s;}
+.sri:hover{border-color:rgba(255,45,85,.4);transform:translateX(4px);}
+.sri-img{width:48px;height:48px;border-radius:10px;object-fit:cover;background:var(--ink3);}
+.sri-t{font-size:.88rem;font-weight:700;margin-bottom:.18rem;}
+.sri-m{font-size:.72rem;color:var(--fog);}
+.sri-p{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--jade);flex-shrink:0;}
+.smt{text-align:center;color:var(--fog);padding:2rem;font-size:.88rem;}
+
+/* ===== COUNTRY BANNER ===== */
+.cb{position:relative;z-index:1;background:linear-gradient(90deg,rgba(255,45,85,.08),rgba(0,212,255,.06),rgba(255,45,85,.08));border-bottom:1px solid var(--line);padding:.5rem 2rem;display:flex;align-items:center;justify-content:center;gap:1rem;font-size:.8rem;}
+.cb-t{color:var(--fog);}
+.cb-t strong{color:var(--snow);}
+.chb{background:var(--ink2);border:1px solid var(--line2);color:var(--fire);padding:.2rem .7rem;border-radius:8px;font-size:.72rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;transition:all .2s;}
+.chb:hover{background:rgba(255,45,85,.1);border-color:var(--fire);}
+
+/* ===== TICKER ===== */
+.tk{position:relative;z-index:1;background:var(--ink2);border-bottom:1px solid var(--line);padding:.65rem 0;overflow:hidden;display:flex;align-items:center;}
+.tk-lbl{position:relative;z-index:2;flex-shrink:0;padding:0 1.2rem;font-size:.64rem;font-weight:800;color:var(--fire);text-transform:uppercase;letter-spacing:2px;white-space:nowrap;background:var(--ink2);border-right:2px solid rgba(255,45,85,.35);}
+.tk-wrap{flex:1;overflow:hidden;position:relative;}
+.tk-wrap::before,.tk-wrap::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none;}
+.tk-wrap::before{left:0;background:linear-gradient(to right,var(--ink2),transparent);}
+.tk-wrap::after{right:0;background:linear-gradient(to left,var(--ink2),transparent);}
+.tk-tr{display:flex;white-space:nowrap;animation:ticker 90s linear infinite;will-change:transform;}
+.tk-tr:hover{animation-play-state:paused;}
+.tk-it{display:inline-flex;align-items:center;gap:.45rem;padding:.22rem 1.2rem;border-right:1px solid var(--line);cursor:pointer;transition:color .2s;font-size:.76rem;flex-shrink:0;}
+.tk-it:hover{color:var(--fire);}
+.tk-s{font-weight:700;}
+.tk-p{color:var(--jade);font-weight:600;font-size:.68rem;}
+
+/* ===== AD BANNERS ===== */
+.ad-banner{position:relative;z-index:1;background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);height:90px;display:flex;align-items:center;justify-content:center;color:var(--fog);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;gap:.75rem;}
+.ad-banner.bottom{margin-top:2rem;}
+
+/* ===== HERO ===== */
+.hero{position:relative;z-index:1;text-align:center;padding:3.5rem 2rem 2rem;}
+.htag{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink2);border:1px solid var(--line2);padding:.32rem .95rem;border-radius:40px;font-size:.72rem;font-weight:600;color:var(--fog);margin-bottom:1.4rem;}
+.dot{width:6px;height:6px;background:var(--jade);border-radius:50%;animation:blink 1.5s infinite;}
+.hh{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;letter-spacing:-1px;margin-bottom:.9rem;}
+.hh em{font-style:italic;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hp{color:var(--fog);font-size:1rem;max-width:430px;margin:0 auto 1.8rem;line-height:1.6;}
+.hl2{font-size:.7rem;color:var(--fog);margin-bottom:.4rem;}
+.nlbar{display:flex;gap:0;max-width:480px;margin:0 auto 2rem;background:var(--ink2);border:1px solid var(--line2);border-radius:14px;overflow:hidden;transition:border-color .2s;}
+.nlbar:focus-within{border-color:rgba(255,45,85,.5);}
+.nlbar input{flex:1;background:none;border:none;padding:.85rem 1.2rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;}
+.nlbar input::placeholder{color:var(--fog);}
+.nlbar button{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.85rem 1.3rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.nlbar button:hover{filter:brightness(1.1);}
+
+/* ===== STATS ===== */
+.stats{position:relative;z-index:1;display:flex;justify-content:center;max-width:560px;margin:2rem auto;background:var(--ink2);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;}
+.st{flex:1;padding:1.1rem;text-align:center;border-right:1px solid var(--line);}
+.st:last-child{border-right:none;}
+.st-n{font-family:'Instrument Serif',serif;font-size:1.7rem;background:linear-gradient(135deg,var(--fire),var(--fire2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.st-l{font-size:.64rem;color:var(--fog);text-transform:uppercase;letter-spacing:1.5px;margin-top:.1rem;}
+
+/* ===== FILTERS ===== */
+.fls{position:relative;z-index:1;max-width:1200px;margin:0 auto 1.5rem;padding:0 2rem;display:flex;gap:.5rem;flex-wrap:wrap;}
+.fil{padding:.42rem .95rem;border-radius:40px;border:1px solid var(--line);background:transparent;color:var(--fog);font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.fil:hover{color:var(--mist);}
+.fil.on{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border-color:transparent;box-shadow:0 4px 16px rgba(255,45,85,.35);}
+
+/* ===== MAIN LAYOUT ===== */
+.main{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:1fr 280px;gap:2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;}
+
+/* ===== DEAL CARD ===== */
+.dc{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .4s cubic-bezier(.34,1.56,.64,1);opacity:0;transform:translateY(24px);}
+.dc.in{opacity:1;transform:translateY(0);}
+.dc:hover{border-color:rgba(255,45,85,.35);transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.5);}
+.dc-img{width:100%;height:185px;object-fit:cover;background:var(--ink3);display:block;transition:transform .4s;}
+.dc:hover .dc-img{transform:scale(1.04);}
+.dc-img-wrap{height:185px;overflow:hidden;position:relative;}
+.dc-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(8,8,16,.6));}
+.dc-badge{position:absolute;top:12px;left:12px;padding:.22rem .7rem;border-radius:20px;font-size:.65rem;font-weight:800;z-index:2;text-transform:uppercase;letter-spacing:.5px;}
+.bh{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;}
+.bi{background:linear-gradient(135deg,#0099ff,var(--ice));color:#fff;}
+.bg2{background:linear-gradient(135deg,#b8860b,var(--gold));color:var(--ink);}
+.dc-ct{position:absolute;top:12px;right:12px;font-size:1.1rem;z-index:2;}
+.dc-body{padding:1rem;}
+.dc-cat{font-size:.64rem;font-weight:700;color:var(--fire);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.35rem;}
+.dc-t{font-size:.9rem;font-weight:700;line-height:1.3;margin-bottom:.7rem;}
+.dc-pr{display:flex;align-items:center;gap:.55rem;margin-bottom:.85rem;}
+.dc-nw{font-family:'Instrument Serif',serif;font-size:1.35rem;color:var(--jade);}
+.dc-ol{font-size:.78rem;color:var(--fog);text-decoration:line-through;}
+.dc-pc{background:rgba(0,230,118,.12);color:var(--jade);padding:.15rem .48rem;border-radius:5px;font-size:.68rem;font-weight:800;margin-left:auto;border:1px solid rgba(0,230,118,.2);}
+.dc-ft{display:flex;align-items:center;justify-content:space-between;padding-top:.65rem;border-top:1px solid var(--line);gap:.4rem;}
+.lkb{display:flex;align-items:center;gap:.3rem;background:var(--ink3);border:1px solid var(--line);color:var(--fog);padding:.3rem .75rem;border-radius:20px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:600;transition:all .2s;}
+.lkb:hover,.lkb.on{background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.4);color:var(--fire);}
+.lkb.on .h{animation:pop .35s cubic-bezier(.34,1.56,.64,1);}
+.gb{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.4rem .95rem;border-radius:9px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;}
+.gb:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(255,45,85,.4);}
+.dc-st{font-size:.67rem;color:var(--fog);}
+/* DELETE BTN (admin only) */
+.del-btn{background:rgba(255,45,85,.1);border:1px solid rgba(255,45,85,.3);color:var(--fire);width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:.8rem;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+.del-btn:hover{background:rgba(255,45,85,.25);transform:scale(1.1);}
+
+/* ===== SIDEBAR ===== */
+.sba{display:flex;flex-direction:column;gap:1.2rem;}
+.sbc{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r2);padding:1.2rem;opacity:0;transform:translateX(16px);transition:all .5s ease;}
+.sbc.in{opacity:1;transform:translateX(0);}
+.sbt2{font-size:.8rem;font-weight:800;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.tdi{display:flex;align-items:center;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line);cursor:pointer;transition:all .2s;}
+.tdi:last-child{border-bottom:none;}
+.tdi:hover{padding-left:.4rem;}
+.tdi-img{width:36px;height:36px;border-radius:8px;object-fit:cover;background:var(--ink3);}
+.tdi-n{font-size:.77rem;font-weight:600;margin-bottom:.1rem;}
+.tdi-p{font-size:.7rem;color:var(--jade);font-weight:700;}
+
+/* ===== AFFILIATIONS PAGE ===== */
+#ap{display:none;position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:2rem 2rem 6rem;}
+#ap.on{display:block;}
+.aph{text-align:center;padding:2rem 0 2.5rem;}
+.aph h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.6rem;}
+.aph h2 em{font-style:italic;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.aph p{color:var(--fog);font-size:.9rem;max-width:480px;margin:0 auto .8rem;}
+.affs{display:flex;gap:0;max-width:460px;margin:0 auto;background:var(--ink2);border:1px solid var(--line2);border-radius:14px;overflow:hidden;}
+.affs input{flex:1;background:none;border:none;padding:.8rem 1.1rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;outline:none;}
+.affs input::placeholder{color:var(--fog);}
+.affs button{background:var(--ink3);border:none;border-left:1px solid var(--line2);padding:0 1.1rem;color:var(--fog);cursor:pointer;font-size:.95rem;transition:all .2s;}
+.affs button:hover{color:var(--fire);}
+.afc{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;}
+.acs{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;}
+.ach{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;background:linear-gradient(135deg,rgba(255,45,85,.05),rgba(0,212,255,.03));border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s;}
+.ach:hover{background:linear-gradient(135deg,rgba(255,45,85,.09),rgba(0,212,255,.05));}
+.ac-f{font-size:1.8rem;}
+.ac-n{font-family:'Instrument Serif',serif;font-size:1.1rem;}
+.ac-c{margin-left:auto;font-size:.72rem;color:var(--fog);}
+.ac-ch{color:var(--fog);transition:transform .3s;font-size:.85rem;}
+.acs.open .ac-ch{transform:rotate(180deg);}
+.acl{display:none;padding:1rem 1.4rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.8rem;}
+.acs.open .acl{display:grid;}
+.acard{background:var(--ink3);border:1px solid var(--line);border-radius:var(--r);padding:.95rem 1rem;transition:all .25s;cursor:pointer;}
+.acard:hover{border-color:rgba(255,45,85,.4);transform:translateY(-3px);}
+.act{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;}
+.acn{font-weight:800;font-size:.88rem;}
+.acp{background:rgba(0,230,118,.12);color:var(--jade);border:1px solid rgba(0,230,118,.2);padding:.18rem .55rem;border-radius:20px;font-size:.68rem;font-weight:800;}
+.acd{font-size:.73rem;color:var(--fog);line-height:1.4;margin-bottom:.65rem;}
+.acb{width:100%;background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.48rem;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:700;cursor:pointer;}
+
+/* ===== MODAL ===== */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(14px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.ov.on{opacity:1;pointer-events:all;}
+.mo{background:var(--ink2);border:1px solid var(--line2);border-radius:28px;padding:2rem;width:90%;max-width:400px;transform:scale(.92) translateY(16px);transition:all .35s cubic-bezier(.34,1.56,.64,1);position:relative;}
+.ov.on .mo{transform:scale(1) translateY(0);}
+.mo h2{font-family:'Instrument Serif',serif;font-size:1.55rem;margin-bottom:.4rem;}
+.mo p{color:var(--fog);font-size:.84rem;margin-bottom:1.2rem;line-height:1.5;}
+.mi{width:100%;background:var(--ink3);border:1px solid var(--line2);border-radius:12px;padding:.8rem 1rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.87rem;outline:none;margin-bottom:.8rem;transition:border-color .2s;}
+.mi:focus{border-color:rgba(255,45,85,.5);}
+.mi::placeholder{color:var(--fog);}
+.mb{width:100%;background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.85rem;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s;margin-bottom:.8rem;}
+.mb:hover{filter:brightness(1.1);transform:translateY(-1px);}
+.ms{text-align:center;font-size:.77rem;color:var(--fog);}
+.ms a{color:var(--fire);cursor:pointer;font-weight:600;}
+.mc{position:absolute;top:.9rem;right:.9rem;background:var(--ink3);border:1px solid var(--line);color:var(--fog);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;}
+
+/* ===== ADMIN PANEL ===== */
+.adp{background:var(--ink2);border:1px solid rgba(255,45,85,.25);border-radius:28px;padding:2rem;max-width:700px;}
+.adp h2{font-family:'Instrument Serif',serif;font-size:1.35rem;margin-bottom:1.3rem;color:var(--fire);}
+.adp-tabs{display:flex;gap:.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line);padding-bottom:1rem;}
+.adp-tab{background:none;border:1px solid var(--line2);padding:.4rem .9rem;border-radius:10px;color:var(--fog);font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.adp-tab.on{background:rgba(255,45,85,.12);border-color:rgba(255,45,85,.35);color:var(--fire);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.fg{display:flex;flex-direction:column;gap:.3rem;}
+.fl{font-size:.67rem;font-weight:700;color:var(--fog);text-transform:uppercase;letter-spacing:1px;}
+.fs2{background:var(--ink3);border:1px solid var(--line2);border-radius:12px;padding:.72rem 1rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border-color .2s;}
+.fs2:focus{border-color:rgba(255,45,85,.5);}
+.pb{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.85rem;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:all .2s;}
+.pb:hover{filter:brightness(1.1);transform:translateY(-1px);}
+/* ADD COUNTRY */
+.country-form{display:none;}
+.country-form.on{display:block;}
+.country-preview{background:var(--ink3);border:1px solid var(--line2);border-radius:14px;padding:1rem;margin-bottom:1rem;text-align:center;font-size:2rem;}
+.existing-countries{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.7rem;margin-top:1.2rem;}
+.ec-item{background:var(--ink3);border:1px solid var(--line);border-radius:12px;padding:.7rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
+.ec-info{display:flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:600;}
+.ec-del{background:rgba(255,45,85,.1);border:1px solid rgba(255,45,85,.25);color:var(--fire);width:24px;height:24px;border-radius:6px;cursor:pointer;font-size:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
+.ec-del:hover{background:rgba(255,45,85,.25);}
+
+/* ===== NEWSLETTER BAR (category) ===== */
+.nl-cat-bar{position:relative;z-index:1;max-width:1200px;margin:0 auto 1.5rem;padding:0 2rem;}
+.nl-cat-inner{background:linear-gradient(135deg,rgba(255,45,85,.1),rgba(0,212,255,.06));border:1px solid rgba(255,45,85,.25);border-radius:var(--r2);padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;animation:rise .4s both;}
+.nl-cat-icon{font-size:1.6rem;flex-shrink:0;}
+.nl-cat-txt{flex:1;min-width:200px;}
+.nl-cat-txt strong{font-size:.88rem;font-weight:700;display:block;margin-bottom:.15rem;}
+.nl-cat-txt span{font-size:.75rem;color:var(--fog);}
+.nl-cat-form{display:flex;gap:0;background:var(--ink2);border:1px solid var(--line2);border-radius:12px;overflow:hidden;flex-shrink:0;}
+.nl-cat-form input{background:none;border:none;padding:.65rem 1rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;outline:none;width:220px;}
+.nl-cat-form input::placeholder{color:var(--fog);}
+.nl-cat-form button{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;padding:.65rem 1.1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.nl-cat-form button:hover{filter:brightness(1.1);}
+
+/* ===== COMMENTS ===== */
+.deal-comments-overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(14px);z-index:800;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.deal-comments-overlay.on{opacity:1;pointer-events:all;}
+.comments-panel{background:var(--ink2);border:1px solid var(--line2);border-radius:28px 28px 0 0;width:100%;max-width:680px;max-height:80vh;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
+.deal-comments-overlay.on .comments-panel{transform:translateY(0);}
+.cp-head{padding:1.2rem 1.4rem;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.cp-head h3{font-family:'Instrument Serif',serif;font-size:1.1rem;}
+.cp-close{background:var(--ink3);border:1px solid var(--line);color:var(--fog);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;}
+.cp-deal-info{padding:.75rem 1.4rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.75rem;background:var(--ink3);flex-shrink:0;}
+.cp-deal-img{width:40px;height:40px;border-radius:8px;object-fit:cover;}
+.cp-deal-name{font-size:.82rem;font-weight:700;}
+.cp-deal-price{font-size:.75rem;color:var(--jade);}
+.comments-list{flex:1;overflow-y:auto;padding:1rem 1.4rem;display:flex;flex-direction:column;gap:.85rem;}
+.comment-item{background:var(--ink3);border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;}
+.comment-top{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;}
+.comment-av{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--fire2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.72rem;flex-shrink:0;}
+.comment-name{font-size:.78rem;font-weight:700;}
+.comment-time{font-size:.68rem;color:var(--fog);margin-left:auto;}
+.comment-text{font-size:.82rem;line-height:1.5;color:var(--mist);}
+.comment-lk{display:flex;align-items:center;gap:.3rem;background:none;border:1px solid var(--line2);color:var(--fog);padding:.22rem .6rem;border-radius:20px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:600;margin-top:.6rem;transition:all .2s;}
+.comment-lk:hover,.comment-lk.on{border-color:rgba(255,45,85,.4);color:var(--fire);}
+.no-comments{text-align:center;padding:2rem;color:var(--fog);font-size:.85rem;}
+.comment-input-area{padding:1rem 1.4rem;border-top:1px solid var(--line);flex-shrink:0;}
+.comment-input-row{display:flex;gap:.6rem;align-items:flex-end;}
+.comment-input-row textarea{flex:1;background:var(--ink3);border:1px solid var(--line2);border-radius:12px;padding:.75rem 1rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.84rem;outline:none;resize:none;height:70px;line-height:1.5;transition:border-color .2s;}
+.comment-input-row textarea:focus{border-color:rgba(255,45,85,.5);}
+.comment-input-row textarea::placeholder{color:var(--fog);}
+.send-btn{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;width:40px;height:40px;border-radius:12px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
+.send-btn:hover{filter:brightness(1.1);transform:translateY(-1px);}
+.comment-btn{display:flex;align-items:center;gap:.3rem;background:var(--ink3);border:1px solid var(--line);color:var(--fog);padding:.3rem .75rem;border-radius:20px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:600;transition:all .2s;}
+.comment-btn:hover{border-color:var(--line2);color:var(--mist);}
+
+/* ===== SUPPORT CHAT ===== */
+.support-fab{position:fixed;bottom:2rem;right:2rem;z-index:600;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;}
+.support-btn{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--fire2));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 8px 24px rgba(255,45,85,.45);transition:all .3s cubic-bezier(.34,1.56,.64,1);}
+.support-btn:hover{transform:scale(1.1);}
+.support-notif{position:absolute;top:-4px;right:-4px;width:18px;height:18px;background:var(--jade);border-radius:50%;border:2px solid var(--ink);font-size:.6rem;font-weight:800;display:flex;align-items:center;justify-content:center;color:var(--ink);}
+.support-panel{background:var(--ink2);border:1px solid var(--line2);border-radius:20px;width:340px;max-height:520px;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.6);transform:scale(.9) translateY(16px);opacity:0;pointer-events:none;transition:all .35s cubic-bezier(.34,1.56,.64,1);transform-origin:bottom right;}
+.support-panel.on{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
+.sp-head{padding:1rem 1.2rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.7rem;flex-shrink:0;}
+.sp-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--fire2));display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.sp-info strong{font-size:.85rem;font-weight:700;display:block;}
+.sp-info span{font-size:.7rem;color:var(--jade);}
+.sp-close{margin-left:auto;background:var(--ink3);border:1px solid var(--line);color:var(--fog);width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;}
+.sp-msgs{flex:1;overflow-y:auto;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.65rem;}
+.sp-msg{max-width:80%;padding:.65rem .85rem;border-radius:14px;font-size:.8rem;line-height:1.5;}
+.sp-msg.bot{background:var(--ink3);border:1px solid var(--line);border-radius:14px 14px 14px 4px;align-self:flex-start;}
+.sp-msg.user{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border-radius:14px 14px 4px 14px;align-self:flex-end;}
+.sp-quick{padding:.5rem 1rem;display:flex;gap:.4rem;flex-wrap:wrap;border-top:1px solid var(--line);flex-shrink:0;}
+.sp-qbtn{background:var(--ink3);border:1px solid var(--line2);color:var(--fog);padding:.3rem .7rem;border-radius:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.sp-qbtn:hover{border-color:var(--fire);color:var(--fire);}
+.sp-input{padding:.75rem 1rem;border-top:1px solid var(--line);display:flex;gap:.5rem;flex-shrink:0;}
+.sp-input input{flex:1;background:var(--ink3);border:1px solid var(--line2);border-radius:10px;padding:.55rem .85rem;color:var(--snow);font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;outline:none;transition:border-color .2s;}
+.sp-input input:focus{border-color:rgba(255,45,85,.5);}
+.sp-input input::placeholder{color:var(--fog);}
+.sp-send{background:linear-gradient(135deg,var(--fire),var(--fire2));color:#fff;border:none;width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* ADMIN INBOX */
+.inbox-section{margin-top:1.5rem;}
+.inbox-title{font-size:.75rem;font-weight:700;color:var(--fog);text-transform:uppercase;letter-spacing:1px;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+.inbox-item{background:var(--ink3);border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem;margin-bottom:.6rem;display:flex;flex-direction:column;gap:.3rem;}
+.inbox-meta{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:var(--fog);}
+.inbox-meta strong{color:var(--snow);}
+.inbox-text{font-size:.8rem;line-height:1.5;color:var(--mist);}
+.inbox-badge{background:rgba(255,45,85,.12);color:var(--fire);border:1px solid rgba(255,45,85,.25);padding:.15rem .5rem;border-radius:20px;font-size:.65rem;font-weight:700;}
+.inbox-badge.nl{background:rgba(0,212,255,.12);color:var(--ice);border-color:rgba(0,212,255,.25);}
+.inbox-empty{text-align:center;color:var(--fog);font-size:.8rem;padding:1.5rem;}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--ink2);border:1px solid var(--line2);border-radius:16px;padding:.88rem 1.3rem;display:flex;align-items:center;gap:.6rem;z-index:3000;transform:translateY(80px);opacity:0;transition:all .4s cubic-bezier(.34,1.56,.64,1);font-size:.84rem;font-weight:500;box-shadow:0 16px 40px rgba(0,0,0,.5);}
+.toast.on{transform:translateY(0);opacity:1;}
+.emp{grid-column:1/-1;text-align:center;padding:3.5rem 2rem;color:var(--fog);}
+.emp-i{font-size:3rem;margin-bottom:.8rem;opacity:.5;}
+.emp-t{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--mist);margin-bottom:.4rem;}
+
+@media(max-width:900px){.main{grid-template-columns:1fr}.sba{display:none}.fs{display:none}.nc{display:none}}
+@media(max-width:600px){nav{padding:0 1rem}#cp,#ap{padding:2rem 1rem 4rem}.hero{padding:2rem 1rem 1.5rem}.main,.fls{padding:0 1rem 3rem}.cg{grid-template-columns:repeat(2,1fr)}.fr{grid-template-columns:1fr}.sort-bar{padding:0 1rem}}
+
+/* ===== V5: SORT BAR ===== */
+.sort-bar{position:relative;z-index:1;max-width:1200px;margin:0 auto .75rem;padding:0 2rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.sort-lbl{font-size:.68rem;font-weight:700;color:var(--fog);text-transform:uppercase;letter-spacing:1.5px;margin-right:.2rem;}
+.srt{padding:.32rem .75rem;border-radius:20px;border:1px solid var(--line2);background:transparent;color:var(--fog);font-family:'Plus Jakarta Sans',sans-serif;font-size:.73rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.srt:hover{color:var(--mist);}
+.srt.on{background:rgba(0,212,255,.12);color:var(--ice);border-color:rgba(0,212,255,.35);}
+.deal-count-tag{margin-left:auto;font-size:.7rem;color:var(--fog);background:var(--ink3);border:1px solid var(--line);border-radius:20px;padding:.25rem .75rem;}
+/* ===== V5: SCORE BAR ===== */
+.score-bar-wrap{margin-bottom:.5rem;}
+.score-bar{height:2px;border-radius:2px;background:linear-gradient(90deg,var(--fire),var(--gold));}
+.score-label{font-size:.59rem;color:var(--fog);text-transform:uppercase;letter-spacing:.8px;margin-bottom:.18rem;display:flex;justify-content:space-between;}
+/* ===== V5: COUNTDOWN ===== */
+.dc-countdown{display:inline-flex;align-items:center;gap:.3rem;font-size:.63rem;font-weight:700;color:var(--gold);background:rgba(255,214,10,.08);border:1px solid rgba(255,214,10,.2);border-radius:6px;padding:.18rem .5rem;}
+.dc-countdown.urgent{color:var(--fire);background:rgba(255,45,85,.08);border-color:rgba(255,45,85,.25);animation:urgentPulse 1s ease-in-out infinite;}
+@keyframes urgentPulse{0%,100%{opacity:1}50%{opacity:.55}}
+/* ===== V5: RELATED DEALS ===== */
+.related-section{grid-column:1/-1;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--line);}
+.related-title{font-size:.68rem;font-weight:800;color:var(--fog);text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;}
+.related-title::after{content:'';flex:1;height:1px;background:var(--line);}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.85rem;}
+.rel-card{background:var(--ink3);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .3s;}
+.rel-card:hover{border-color:rgba(255,45,85,.3);transform:translateY(-3px);}
+.rel-img{width:100%;height:110px;object-fit:cover;}
+.rel-body{padding:.7rem;}
+.rel-t{font-size:.76rem;font-weight:700;margin-bottom:.35rem;line-height:1.3;}
+.rel-pr{display:flex;align-items:center;gap:.35rem;font-size:.72rem;}
+.rel-nw{color:var(--jade);font-weight:700;}
+.rel-pc{background:rgba(0,230,118,.12);color:var(--jade);border:1px solid rgba(0,230,118,.2);padding:.1rem .32rem;border-radius:4px;font-size:.6rem;font-weight:800;}
+/* ===== V5: SEARCH HIGHLIGHT ===== */
+mark.hl{background:rgba(255,45,85,.22);border-radius:3px;padding:0 2px;color:inherit;}
+/* ===== V5: TRENDING BADGE ===== */
+.trending-ribbon{position:absolute;top:8px;right:0;background:linear-gradient(135deg,var(--gold),#ff9500);color:var(--ink);font-size:.53rem;font-weight:800;padding:3px 10px 3px 6px;clip-path:polygon(8px 0,100% 0,100% 100%,8px 100%,0 50%);letter-spacing:.5px;text-transform:uppercase;z-index:3;}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+
+<!-- COUNTRY PAGE -->
+<div id="cp">
+  <div class="cp-logo"><span class="f">Deal</span><span class="i">Flash</span> ⚡</div>
+  <div class="cp-sub">Worldwide Deals Platform</div>
+  <h1 class="cp-h">Choose your <em>region</em></h1>
+  <p class="cp-p">Deals, currencies & affiliate stores tailored to your location</p>
+  <div class="regions" id="cpRegions"></div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="so" id="so" onclick="cso(event)">
+  <div class="sb2">
+    <span style="font-size:1.1rem;color:var(--fog);">🔍</span>
+    <input type="text" id="si" placeholder="Rechercher un deal, une boutique..." oninput="doS(this.value)">
+    <button class="scl" onclick="csoB()">×</button>
+  </div>
+  <div class="sres" id="sr"></div>
+</div>
+
+<!-- MAIN SITE -->
+<div id="ms" class="hidden">
+  <nav>
+    <div class="nl" onclick="back()"><span class="f">Deal</span><span class="i">Flash</span> ⚡</div>
+    <div class="nc">
+      <div class="fs" id="fst"></div>
+      <button class="ntab" id="atab" onclick="togAff()">🤝 Affiliations</button>
+    </div>
+    <div class="nr">
+      <button class="sib" onclick="oso()">🔍</button>
+      <div id="nrl" style="display:flex;gap:.5rem;">
+        <button class="btn bg" onclick="om('lm')">Connexion</button>
+        <button class="btn bf" onclick="om('rm')">S'inscrire</button>
+      </div>
+      <div id="un" class="hidden" style="display:flex;align-items:center;gap:.6rem;">
+        <span style="font-size:.8rem;color:var(--fog);" id="uname"></span>
+        <div class="uav" id="uav" onclick="tadm()"></div>
+        <button class="btn bg" onclick="lo()" style="font-size:.75rem;padding:.35rem .8rem;">Déco</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cb">
+    <span id="cbf" style="font-size:1.1rem;"></span>
+    <span class="cb-t">Deals pour <strong id="cbn"></strong></span>
+    <button class="chb" onclick="back()">🌍 Changer</button>
+  </div>
+
+  <!-- TICKER -->
+  <div class="tk"><div class="tk-lbl">⚡ PARTENAIRES</div><div class="tk-wrap"><div class="tk-tr" id="tkt"></div></div></div>
+
+  <!-- TOP AD BANNER -->
+  <div class="ad-banner">
+    <span>📢</span><span>PUBLICITÉ — Google AdSense (728×90)</span><span>📢</span>
+  </div>
+
+  <!-- DEALS PAGE -->
+  <div id="dp2">
+    <section class="hero">
+      <div class="htag"><span class="dot"></span><span id="hl">Deals mis à jour en temps réel</span></div>
+      <h1 class="hh" id="hh">Les meilleurs<br><em>bons plans</em></h1>
+      <p class="hp" id="hp">Tech, mode, gaming... Toutes les promos au même endroit.</p>
+    </section>
+    <div class="stats" style="padding:0 2rem;">
+      <div class="st"><div class="st-n" id="sd">0</div><div class="st-l" id="sdl">Deals</div></div>
+      <div class="st"><div class="st-n" id="sm">0</div><div class="st-l">Membres</div></div>
+      <div class="st"><div class="st-n" id="ss">0</div><div class="st-l">Économies</div></div>
+    </div>
+    <div class="fls">
+      <button class="fil on" onclick="flt('all',this)">⚡ Tous</button>
+      <button class="fil" onclick="flt('tech',this)">💻 Tech</button>
+      <button class="fil" onclick="flt('gaming',this)">🎮 Gaming</button>
+      <button class="fil" onclick="flt('mode',this)">👗 Mode</button>
+      <button class="fil" onclick="flt('maison',this)">🏠 Maison</button>
+      <button class="fil" onclick="flt('food',this)">🍕 Food</button>
+      <button class="fil" onclick="flt('voyage',this)">✈️ Voyage</button>
+    </div>
+    <div id="nlCatBar" class="nl-cat-bar" style="display:none;"></div>
+    <!-- V5: SORT BAR -->
+    <div class="sort-bar">
+      <span class="sort-lbl">Trier par</span>
+      <button class="srt on" onclick="setSort('score',this)">⚡ Pertinence</button>
+      <button class="srt" onclick="setSort('discount',this)">📉 Remise</button>
+      <button class="srt" onclick="setSort('price_asc',this)">💰 Prix ↑</button>
+      <button class="srt" onclick="setSort('price_desc',this)">💰 Prix ↓</button>
+      <button class="srt" onclick="setSort('popular',this)">❤️ Populaires</button>
+      <button class="srt" onclick="setSort('recent',this)">🆕 Récents</button>
+      <span class="deal-count-tag" id="dealCountTag">0 deals</span>
+    </div>
+    <div class="main">
+      <div class="grid" id="dg"></div>
+      <aside class="sba">
+        <div class="sbc" id="sbt"><div class="sbt2">🏆 Top Deals</div><div id="tl"></div></div>
+        <div style="background:var(--ink2);border:1px dashed var(--line2);border-radius:var(--r2);height:250px;display:flex;align-items:center;justify-content:center;color:var(--fog);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;flex-direction:column;gap:.35rem;"><span>📢</span><span>AdSense 300×250</span></div>
+        <div class="sbc" id="sbn">
+          <div class="sbt2">📬 Newsletter</div>
+          <p style="color:var(--fog);font-size:.78rem;line-height:1.5;margin-bottom:.85rem;">Les meilleurs deals chaque matin dans ta boîte mail.</p>
+          <div id="sbnContent"></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- BOTTOM AD BANNER -->
+    <div class="ad-banner bottom">
+      <span>📢</span><span>PUBLICITÉ — Google AdSense (728×90)</span><span>📢</span>
+    </div>
+  </div>
+
+  <!-- AFFILIATIONS PAGE -->
+  <div id="ap">
+    <div class="aph">
+      <h2>Nos <em>partenaires</em> affiliés 🤝</h2>
+      <p>Toutes nos boutiques partenaires par pays. Clique pour rejoindre le programme et commencer à gagner.</p>
+      <div class="affs"><input type="text" placeholder="🔍 Rechercher une boutique..." id="afs" oninput="filtAff(this.value)"><button>🔍</button></div>
+    </div>
+    <div class="afc" id="afc"></div>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div id="aw" class="hidden" style="position:relative;z-index:1;max-width:1200px;margin:0 auto 4rem;padding:0 2rem;">
+    <div class="adp">
+      <h2>⚡ Panel Admin</h2>
+      <div class="adp-tabs">
+        <button class="adp-tab on" onclick="swTab('deals',this)">📦 Publier un deal</button>
+        <button class="adp-tab" onclick="swTab('countries',this)">🌍 Gérer les pays</button>
+        <button class="adp-tab" onclick="swTab('inbox',this)">📬 Boîte de réception <span id="inboxCount" style="background:var(--fire);color:#fff;border-radius:20px;padding:1px 6px;font-size:.65rem;margin-left:.3rem;display:none;">0</span></button>
+      </div>
+
+      <!-- TAB: DEALS -->
+      <div id="tab-deals">
+        <div class="fr">
+          <div class="fg"><label class="fl">Titre du deal</label><input class="mi fs2" id="at" placeholder="iPhone 15 Pro..." style="margin:0;"></div>
+          <div class="fg"><label class="fl">Catégorie</label><select class="fs2" id="ac"><option value="tech">💻 Tech</option><option value="gaming">🎮 Gaming</option><option value="mode">👗 Mode</option><option value="maison">🏠 Maison</option><option value="food">🍕 Food</option><option value="voyage">✈️ Voyage</option></select></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Pays</label><select class="fs2" id="aco"></select></div>
+          <div class="fg"><label class="fl">Boutique affiliée</label><input class="mi fs2" id="as" placeholder="Amazon, Fnac..." style="margin:0;"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Prix actuel</label><input class="mi fs2" id="anp" type="number" placeholder="299" style="margin:0;"></div>
+          <div class="fg"><label class="fl">Prix original</label><input class="mi fs2" id="aop" type="number" placeholder="499" style="margin:0;"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">URL de l'image produit</label><input class="mi fs2" id="aimg" placeholder="https://images.amazon.fr/..." style="margin:0;" oninput="prevImg(this.value)"></div>
+          <div class="fg"><label class="fl">Lien affilié</label><input class="mi fs2" id="al" placeholder="https://amzn.to/..." style="margin:0;"></div>
+        </div>
+        <div id="imgPrev" style="display:none;margin-bottom:1rem;border-radius:14px;overflow:hidden;height:120px;"><img id="prevImgEl" src="" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="fg" style="margin-bottom:1rem;"><label class="fl">Badge</label><select class="fs2" id="ab"><option value="hot">🔥 HOT</option><option value="new">✨ NOUVEAU</option><option value="top">👑 TOP</option></select></div>
+        <button class="pb" onclick="addD()">⚡ Publier maintenant</button>
+      </div>
+
+      <!-- TAB: COUNTRIES -->
+      <div id="tab-countries" style="display:none;">
+        <p style="color:var(--fog);font-size:.85rem;margin-bottom:1.4rem;line-height:1.5;">Ajoute de nouveaux pays pour élargir DealFlash dans le monde entier. Les pays ajoutés apparaîtront dans la page de sélection et dans la barre de navigation.</p>
+        <div class="fr">
+          <div class="fg"><label class="fl">Emoji drapeau</label><input class="mi fs2" id="cFlag" placeholder="🇸🇳" style="margin:0;" maxlength="4" oninput="prevCountry()"></div>
+          <div class="fg"><label class="fl">Nom du pays</label><input class="mi fs2" id="cName" placeholder="Sénégal" style="margin:0;" oninput="prevCountry()"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Code pays (2 lettres)</label><input class="mi fs2" id="cCode" placeholder="sn" style="margin:0;" maxlength="2"></div>
+          <div class="fg"><label class="fl">Devise</label><input class="mi fs2" id="cCur" placeholder="FCFA" style="margin:0;"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label class="fl">Région</label>
+            <select class="fs2" id="cRegion">
+              <option value="europe">🇪🇺 Europe</option>
+              <option value="namerica">🌎 Amérique du Nord</option>
+              <option value="africa">🌍 Afrique</option>
+              <option value="asia">🌏 Asie</option>
+              <option value="other">🌐 Autre</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Nb de deals initial</label><input class="mi fs2" id="cDeals" placeholder="0" type="number" style="margin:0;"></div>
+        </div>
+        <div class="country-preview" id="cprev">🏳️ Aperçu du pays</div>
+        <button class="pb" onclick="addCountry()">🌍 Ajouter ce pays</button>
+        <div style="margin-top:1.5rem;">
+          <div style="font-size:.75rem;font-weight:700;color:var(--fog);text-transform:uppercase;letter-spacing:1px;margin-bottom:.75rem;">Pays existants</div>
+          <div class="existing-countries" id="ecList"></div>
+        </div>
+      </div>
+
+      <!-- TAB: INBOX -->
+      <div id="tab-inbox" style="display:none;">
+        <div class="inbox-section">
+          <div class="inbox-title">📧 Abonnements newsletter par catégorie <span id="nlSubCount" style="color:var(--fire);font-weight:700;"></span></div>
+          <div id="nlInbox"><div class="inbox-empty">Aucun abonnement pour l'instant.</div></div>
+        </div>
+        <div class="inbox-section" style="margin-top:2rem;">
+          <div class="inbox-title">🎯 Demandes de deals clients <span id="reqCount" style="color:var(--fire);font-weight:700;"></span></div>
+          <div id="reqInbox"><div class="inbox-empty">Aucune demande pour l'instant.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMENTS OVERLAY -->
+<div class="deal-comments-overlay" id="commentsOv" onclick="closeCommentsOv(event)">
+  <div class="comments-panel">
+    <div class="cp-head">
+      <h3>💬 Commentaires</h3>
+      <button class="cp-close" onclick="closeComments()">×</button>
+    </div>
+    <div class="cp-deal-info" id="cpDealInfo"></div>
+    <div class="comments-list" id="commentsList"></div>
+    <div class="comment-input-area">
+      <div id="commentLoginMsg" class="hidden" style="text-align:center;font-size:.8rem;color:var(--fog);margin-bottom:.6rem;">
+        <a onclick="om('lm')" style="color:var(--fire);cursor:pointer;font-weight:600;">Connecte-toi</a> pour laisser un commentaire
+      </div>
+      <div class="comment-input-row" id="commentInputRow">
+        <textarea id="commentText" placeholder="Ton avis sur ce deal..."></textarea>
+        <button class="send-btn" onclick="postComment()">➤</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT CHAT -->
+<div class="support-fab" id="supportFab" style="display:none;">
+  <div class="support-panel" id="supportPanel">
+    <div class="sp-head">
+      <div class="sp-av">⚡</div>
+      <div class="sp-info"><strong>Support DealFlash</strong><span>● En ligne</span></div>
+      <button class="sp-close" onclick="togSupport()">×</button>
+    </div>
+    <div class="sp-msgs" id="spMsgs"></div>
+    <div class="sp-quick" id="spQuick"></div>
+    <div class="sp-input">
+      <input type="text" id="spInput" placeholder="Écris ton message..." onkeydown="if(event.key==='Enter')sendSupport()">
+      <button class="sp-send" onclick="sendSupport()">➤</button>
+    </div>
+  </div>
+  <button class="support-btn" onclick="togSupport()" title="Support & Demandes">
+    💬
+    <div class="support-notif" id="spNotif" style="display:none;">!</div>
+  </button>
+</div>
+
+<!-- MODALS -->
+<div class="ov" id="lm"><div class="mo"><button class="mc" onclick="cm('lm')">×</button><h2>Bon retour 👋</h2><p>Connecte-toi pour liker et recevoir des alertes personnalisées.</p><input class="mi" type="email" placeholder="Email" id="le"><input class="mi" type="password" placeholder="Mot de passe" id="lp"><button class="mb" onclick="login()">Se connecter</button><div class="ms">Pas de compte ? <a onclick="sm('lm','rm')">S'inscrire</a></div></div></div>
+<div class="ov" id="rm"><div class="mo"><button class="mc" onclick="cm('rm')">×</button><h2>Rejoins-nous 🚀</h2><p>Crée ton compte et ne rate plus aucun bon plan dans le monde.</p><input class="mi" type="text" placeholder="Pseudo" id="rn"><input class="mi" type="email" placeholder="Email" id="re"><input class="mi" type="password" placeholder="Mot de passe" id="rp"><button class="mb" onclick="reg()">Créer mon compte</button><div class="ms">Déjà un compte ? <a onclick="sm('rm','lm')">Se connecter</a></div></div></div>
+<div class="toast" id="toast"><span id="ti"></span><span id="tm"></span></div>
+
+<script>
+// ============ DATA ============
+const TX={fr:{h:'Les meilleurs<br><em>bons plans</em>',d:'Tech, mode, gaming... Toutes les promos au même endroit.',l:'Deals mis à jour en temps réel'},en:{h:'The best<br><em>deals</em> online',d:'Tech, fashion, gaming... All the best offers in one place.',l:'Deals updated in real time'},de:{h:'Die besten<br><em>Angebote</em>',d:'Tech, Mode, Gaming... Alle Deals an einem Ort.',l:'Deals in Echtzeit aktualisiert'},es:{h:'Las mejores<br><em>ofertas</em>',d:'Tecnología, moda, gaming... Todas las ofertas.',l:'Ofertas actualizadas'},it:{h:'Le migliori<br><em>offerte</em>',d:'Tech, moda, gaming... Tutte le offerte.',l:'Offerte aggiornate in tempo reale'}};
+
+// COUNTRIES (dynamic)
+let COUNTRIES = {
+  fr:{n:'France',f:'🇫🇷',c:'€',l:'fr',region:'europe',deals:48},
+  gb:{n:'United Kingdom',f:'🇬🇧',c:'£',l:'en',region:'europe',deals:35},
+  de:{n:'Deutschland',f:'🇩🇪',c:'€',l:'de',region:'europe',deals:29},
+  es:{n:'España',f:'🇪🇸',c:'€',l:'es',region:'europe',deals:22},
+  it:{n:'Italia',f:'🇮🇹',c:'€',l:'it',region:'europe',deals:18},
+  be:{n:'Belgique',f:'🇧🇪',c:'€',l:'fr',region:'europe',deals:14},
+  ch:{n:'Suisse',f:'🇨🇭',c:'CHF',l:'fr',region:'europe',deals:11},
+  us:{n:'United States',f:'🇺🇸',c:'$',l:'en',region:'namerica',deals:64},
+  ca:{n:'Canada',f:'🇨🇦',c:'CA$',l:'en',region:'namerica',deals:27},
+  dz:{n:'Algérie',f:'🇩🇿',c:'DA',l:'fr',region:'africa',deals:16},
+  ma:{n:'Maroc',f:'🇲🇦',c:'MAD',l:'fr',region:'africa',deals:19},
+  tn:{n:'Tunisie',f:'🇹🇳',c:'TND',l:'fr',region:'africa',deals:12},
+  ci:{n:"Côte d'Ivoire",f:'🇨🇮',c:'FCFA',l:'fr',region:'africa',deals:8},
+};
+
+const AFFS={
+  fr:{n:'France',f:'🇫🇷',s:[{n:'Amazon.fr',p:'1–10%',d:'Le plus grand e-commerce.',u:'https://partenaires.amazon.fr'},{n:'Fnac',p:'2–5%',d:'High-tech, livres, jeux vidéo.',u:'#'},{n:'Cdiscount',p:'2–8%',d:'Électronique, électroménager.',u:'#'},{n:'Boulanger',p:'2–4%',d:'Spécialiste multimédia.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hôtels et voyages. Très rentable !',u:'#'},{n:'Decathlon',p:'3–5%',d:'Sport et outdoor.',u:'#'},{n:'La Redoute',p:'5–10%',d:'Mode, maison, décoration.',u:'#'},{n:'Veepee',p:'5–8%',d:'Ventes privées premium.',u:'#'}]},
+  gb:{n:'United Kingdom',f:'🇬🇧',s:[{n:'Amazon.co.uk',p:'1–10%',d:"The UK's biggest marketplace.",u:'#'},{n:'ASOS',p:'7–10%',d:'Fashion. High commission.',u:'#'},{n:'Currys',p:'1–3%',d:'Electronics and appliances.',u:'#'},{n:'Argos',p:'1–3%',d:'Toys, furniture, electronics.',u:'#'},{n:'John Lewis',p:'2–4%',d:'Premium department store.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hotels and travel.',u:'#'},{n:'Nike UK',p:'5–8%',d:'Sports and shoes.',u:'#'},{n:'eBay UK',p:'1–4%',d:'New and second-hand.',u:'#'}]},
+  de:{n:'Deutschland',f:'🇩🇪',s:[{n:'Amazon.de',p:'1–10%',d:'Größter Marktplatz.',u:'#'},{n:'Zalando',p:'10–12%',d:'Mode. Sehr hohe Provision!',u:'#'},{n:'MediaMarkt',p:'1–3%',d:'Elektronik.',u:'#'},{n:'Otto',p:'5–8%',d:'Mode, Möbel, Elektronik.',u:'#'},{n:'Douglas',p:'8–12%',d:'Beauty und Parfüm.',u:'#'},{n:'Conrad',p:'3–5%',d:'Technik.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hotels.',u:'#'},{n:'Lidl',p:'2–4%',d:'Online Supermarkt.',u:'#'}]},
+  es:{n:'España',f:'🇪🇸',s:[{n:'Amazon.es',p:'1–10%',d:'El mayor marketplace.',u:'#'},{n:'El Corte Inglés',p:'3–6%',d:'Gran almacén premium.',u:'#'},{n:'Zalando ES',p:'10–12%',d:'Moda. Alta comisión.',u:'#'},{n:'MediaMarkt ES',p:'1–3%',d:'Electrónica.',u:'#'},{n:'PcComponentes',p:'2–4%',d:'Informática y gaming.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hoteles.',u:'#'},{n:'Decathlon ES',p:'3–5%',d:'Deporte.',u:'#'},{n:'Zara/Inditex',p:'4–6%',d:'Moda española.',u:'#'}]},
+  it:{n:'Italia',f:'🇮🇹',s:[{n:'Amazon.it',p:'1–10%',d:'Maggiore marketplace.',u:'#'},{n:'Zalando IT',p:'10–12%',d:'Moda. Alta commissione.',u:'#'},{n:'Unieuro',p:'2–4%',d:'Elettronica.',u:'#'},{n:'Yoox',p:'8–12%',d:'Moda di lusso.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hotel.',u:'#'},{n:'Trenitalia',p:'2–3%',d:'Treni.',u:'#'},{n:'Decathlon IT',p:'3–5%',d:'Sport.',u:'#'},{n:'eBay IT',p:'1–4%',d:'Usato e nuovo.',u:'#'}]},
+  be:{n:'Belgique',f:'🇧🇪',s:[{n:'Amazon.fr',p:'1–10%',d:'Livraison rapide BE.',u:'#'},{n:'Fnac Belgique',p:'2–5%',d:'High-tech et culture.',u:'#'},{n:'Coolblue',p:'3–5%',d:'Électronique Benelux.',u:'#'},{n:'bol.com',p:'4–8%',d:'Marketplace Benelux.',u:'#'},{n:'Carrefour BE',p:'2–4%',d:'Grande surface.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hôtels.',u:'#'},{n:'Decathlon BE',p:'3–5%',d:'Sport.',u:'#'},{n:'MediaMarkt BE',p:'1–3%',d:'Électronique.',u:'#'}]},
+  ch:{n:'Suisse',f:'🇨🇭',s:[{n:'Digitec',p:'2–4%',d:'Tech numéro 1 Suisse.',u:'#'},{n:'Galaxus',p:'2–4%',d:'Marketplace suisse.',u:'#'},{n:'Manor',p:'4–6%',d:'Grand magasin premium.',u:'#'},{n:'Zalando CH',p:'10–12%',d:'Mode et chaussures.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hôtels.',u:'#'},{n:'Interdiscount',p:'2–3%',d:'Électronique.',u:'#'},{n:'Brack.ch',p:'2–4%',d:'Informatique.',u:'#'},{n:'Migros',p:'2–4%',d:'Supermarché en ligne.',u:'#'}]},
+  us:{n:'United States',f:'🇺🇸',s:[{n:'Amazon.com',p:'1–10%',d:"World's biggest marketplace.",u:'https://affiliate-program.amazon.com'},{n:'Walmart',p:'1–4%',d:'Everything.',u:'#'},{n:'Target',p:'1–8%',d:'Lifestyle and home.',u:'#'},{n:'Best Buy',p:'0.5–1%',d:'Electronics.',u:'#'},{n:'Nike US',p:'5–11%',d:'Sportswear.',u:'#'},{n:'Expedia',p:'2–6%',d:'Travel.',u:'#'},{n:'Chewy',p:'4–10%',d:'Pet products.',u:'#'},{n:'eBay',p:'1–4%',d:'Marketplace.',u:'#'}]},
+  ca:{n:'Canada',f:'🇨🇦',s:[{n:'Amazon.ca',p:'1–10%',d:"Canada's biggest.",u:'#'},{n:'Best Buy CA',p:'0.5–1%',d:'Electronics.',u:'#'},{n:'Sport Chek',p:'3–5%',d:'Sports.',u:'#'},{n:"Hudson's Bay",p:'2–4%',d:'Premium store.',u:'#'},{n:'Booking.com',p:'25–40%',d:'Hotels.',u:'#'},{n:'Indigo',p:'5–8%',d:'Books and gifts.',u:'#'},{n:'Walmart CA',p:'1–4%',d:'General.',u:'#'},{n:'Canadian Tire',p:'2–4%',d:'Auto and tools.',u:'#'}]},
+  dz:{n:'Algérie',f:'🇩🇿',s:[{n:'Jumia Algérie',p:'8–12%',d:'Le Amazon algérien !',u:'#'},{n:'Ouedkniss',p:'Pub',d:"Annonces classées.",u:'#'},{n:'Mobilis',p:'Variable',d:'Télécom N°1.',u:'#'},{n:'Ooredoo DZ',p:'Variable',d:'Téléphonie.',u:'#'},{n:'Djezzy',p:'Variable',d:'Opérateur mobile.',u:'#'},{n:'Atlas Electronics',p:'Direct',d:'Électronique.',u:'#'}]},
+  ma:{n:'Maroc',f:'🇲🇦',s:[{n:'Jumia Maroc',p:'8–12%',d:'Le Amazon marocain !',u:'#'},{n:'Hmall',p:'5–8%',d:'2ème marketplace MA.',u:'#'},{n:'Marjane',p:'3–5%',d:'Grande surface.',u:'#'},{n:'Electroplanet',p:'3–5%',d:'Électronique.',u:'#'},{n:'Kitea',p:'4–6%',d:'Meubles.',u:'#'},{n:'Decathlon MA',p:'3–5%',d:'Sport.',u:'#'},{n:'Orange MA',p:'Variable',d:'Télécom.',u:'#'},{n:'Inwi',p:'Variable',d:'Télécom.',u:'#'}]},
+  tn:{n:'Tunisie',f:'🇹🇳',s:[{n:'Jumia Tunisie',p:'8–12%',d:'Le Amazon tunisien.',u:'#'},{n:'MyTek',p:'3–6%',d:'High-tech.',u:'#'},{n:'Tunisianet',p:'3–5%',d:'Électronique.',u:'#'},{n:'MG',p:'3–5%',d:'Électroménager.',u:'#'},{n:'Zoom',p:'3–5%',d:'Photo et tech.',u:'#'},{n:'Carrefour TN',p:'2–4%',d:'Grande surface.',u:'#'},{n:'Ooredoo TN',p:'Variable',d:'Télécom.',u:'#'},{n:'Topnet',p:'Variable',d:'Internet.',u:'#'}]},
+  ci:{n:"Côte d'Ivoire",f:'🇨🇮',s:[{n:'Jumia CI',p:'8–12%',d:"Le Amazon de Côte d'Ivoire !",u:'#'},{n:'Glovo CI',p:'Variable',d:'Livraison et courses.',u:'#'},{n:'Orange CI',p:'Variable',d:'Télécom N°1.',u:'#'},{n:'MTN CI',p:'Variable',d:'Mobile Money et telecom.',u:'#'},{n:'CoinAfrique CI',p:'Pub',d:"Annonces classées.",u:'#'},{n:'Carrefour CI',p:'2–4%',d:'Grande surface Abidjan.',u:'#'}]},
+};
+
+// PRODUCT IMAGES - real product photos via Unsplash/Picsum with relevant seeds
+const IMG_MAP = {
+  tech: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=300&fit=crop',
+  gaming: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=300&fit=crop',
+  mode: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop',
+  maison: 'https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=400&h=300&fit=crop',
+  food: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop',
+  voyage: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop',
+};
+const DEAL_IMGS = {
+  1:'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400&h=300&fit=crop',
+  2:'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop',
+  3:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+  4:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop',
+  5:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop',
+  6:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
+  7:'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&h=300&fit=crop',
+  8:'https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=300&fit=crop',
+  9:'https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop',
+  10:'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=300&fit=crop',
+  11:'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=300&fit=crop',
+  12:'https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop',
+  13:'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400&h=300&fit=crop',
+  14:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+  15:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop',
+  16:'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&h=300&fit=crop',
+  17:'https://images.unsplash.com/photo-1593359677879-a4bb92f829e1?w=400&h=300&fit=crop',
+  18:'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=300&fit=crop',
+  19:'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop',
+  20:'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop',
+  21:'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&h=300&fit=crop',
+  22:'https://images.unsplash.com/photo-1593359677879-a4bb92f829e1?w=400&h=300&fit=crop',
+  23:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop',
+  24:'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop',
+};
+
+let deals=[
+  {id:1,t:'AirPods Pro 2ème gén.',cat:'tech',n:199,o:279,s:'Amazon',l:'#',b:'hot',lk:247,liked:false,co:'fr'},
+  {id:2,t:'PS5 Slim + DualSense',cat:'gaming',n:449,o:599,s:'Fnac',l:'#',b:'top',lk:183,liked:false,co:'fr'},
+  {id:3,t:'Nike Air Max 270',cat:'mode',n:79,o:149,s:'Nike',l:'#',b:'new',lk:92,liked:false,co:'fr'},
+  {id:4,t:'MacBook Air M3 13"',cat:'tech',n:1099,o:1299,s:'Apple',l:'#',b:'hot',lk:312,liked:false,co:'fr'},
+  {id:5,t:'Vol Paris → Barcelone A/R',cat:'voyage',n:49,o:189,s:'easyJet',l:'#',b:'new',lk:88,liked:false,co:'fr'},
+  {id:6,t:'Dyson V15 Detect',cat:'maison',n:379,o:649,s:'Darty',l:'#',b:'top',lk:134,liked:false,co:'fr'},
+  {id:7,t:'iPhone 15 Pro 256GB',cat:'tech',n:899,o:1199,s:'Amazon UK',l:'#',b:'hot',lk:401,liked:false,co:'gb'},
+  {id:8,t:'PlayStation 5 Disc Edition',cat:'gaming',n:349,o:499,s:'Argos',l:'#',b:'top',lk:276,liked:false,co:'gb'},
+  {id:9,t:'ASOS Summer Sale 70%',cat:'mode',n:19,o:65,s:'ASOS',l:'#',b:'new',lk:134,liked:false,co:'gb'},
+  {id:10,t:'Samsung Galaxy S24 Ultra',cat:'tech',n:999,o:1399,s:'Amazon.de',l:'#',b:'hot',lk:223,liked:false,co:'de'},
+  {id:11,t:'Zalando Soldes Mode',cat:'mode',n:29,o:89,s:'Zalando',l:'#',b:'new',lk:167,liked:false,co:'de'},
+  {id:12,t:'RTX 4070 Super',cat:'tech',n:599,o:799,s:'Best Buy',l:'#',b:'hot',lk:534,liked:false,co:'us'},
+  {id:13,t:'Apple Watch Series 9',cat:'tech',n:299,o:399,s:'Amazon.com',l:'#',b:'new',lk:188,liked:false,co:'us'},
+  {id:14,t:'Nike Air Jordan 1',cat:'mode',n:89,o:180,s:'Nike US',l:'#',b:'top',lk:210,liked:false,co:'us'},
+  {id:15,t:'MacBook Pro M3 14"',cat:'tech',n:1599,o:1999,s:'Amazon.ca',l:'#',b:'top',lk:145,liked:false,co:'ca'},
+  {id:16,t:'iPhone 15 128GB',cat:'tech',n:85000,o:120000,s:'Jumia DZ',l:'#',b:'hot',lk:312,liked:false,co:'dz'},
+  {id:17,t:'Samsung TV 50" 4K',cat:'tech',n:4999,o:7500,s:'Jumia MA',l:'#',b:'top',lk:98,liked:false,co:'ma'},
+  {id:18,t:'Xiaomi Redmi Note 13',cat:'tech',n:599,o:899,s:'MyTek',l:'#',b:'new',lk:76,liked:false,co:'tn'},
+  {id:19,t:'iPad Air M2 256GB',cat:'tech',n:699,o:899,s:'Fnac BE',l:'#',b:'hot',lk:156,liked:false,co:'be'},
+  {id:20,t:'Microsoft Surface Pro 9',cat:'tech',n:899,o:1299,s:'Digitec',l:'#',b:'top',lk:87,liked:false,co:'ch'},
+  {id:21,t:'iPhone 15 Pro Max',cat:'tech',n:1199,o:1499,s:'Amazon.es',l:'#',b:'hot',lk:178,liked:false,co:'es'},
+  {id:22,t:'Samsung OLED 55" S95C',cat:'tech',n:999,o:1799,s:'Unieuro',l:'#',b:'top',lk:143,liked:false,co:'it'},
+  {id:23,t:'Samsung Galaxy A54 CI',cat:'tech',n:149000,o:220000,s:'Jumia CI',l:'#',b:'hot',lk:87,liked:false,co:'ci'},
+  {id:24,t:'Montre Casio G-Shock',cat:'mode',n:75000,o:120000,s:'CoinAfrique CI',l:'#',b:'new',lk:45,liked:false,co:'ci'},
+];
+
+function getImg(deal){
+  if(deal.img)return deal.img;
+  return DEAL_IMGS[deal.id]||IMG_MAP[deal.cat]||IMG_MAP.tech;
+}
+
+let cc=null,cf='all',cu=null,subs=[],saff=false,adminTab='deals';
+let users=[{name:'Admin',email:'admin@dealflash.fr',password:'admin123',isAdmin:true}];
+
+// ============ V5: SORT STATE ============
+let currentSort = 'score';
+
+// ============ V5: ADD timestamps to deals for recency scoring ============
+const NOW = Date.now();
+deals.forEach((d,i)=>{
+  if(!d.ts) d.ts = NOW - (i * 3600000 * 2); // staggered: each 2h apart
+  if(!d.views) d.views = Math.floor(Math.random()*500)+50;
+  // countdown: hot deals expire in 12-48h, others in 24-72h
+  if(!d.expiry){
+    const base = d.b==='hot' ? 12 : d.b==='new' ? 48 : 72;
+    d.expiry = NOW + (base + Math.random()*24) * 3600000;
+  }
+});
+
+// ============ V5: LOAD PERSISTED DATA ============
+function loadPersisted(){
+  try{
+    const saved = localStorage.getItem('df_likes');
+    if(saved){
+      const map = JSON.parse(saved);
+      deals.forEach(d=>{ if(map[d.id]!==undefined){ d.lk=map[d.id].lk; d.liked=map[d.id].liked; } });
+    }
+    const savedUser = localStorage.getItem('df_user');
+    if(savedUser){ cu=JSON.parse(savedUser); }
+  }catch(e){}
+}
+
+function persistLikes(){
+  try{
+    const map={};
+    deals.forEach(d=>{ map[d.id]={lk:d.lk,liked:d.liked}; });
+    localStorage.setItem('df_likes',JSON.stringify(map));
+  }catch(e){}
+}
+
+function persistUser(){
+  try{ if(cu) localStorage.setItem('df_user',JSON.stringify(cu)); else localStorage.removeItem('df_user'); }catch(e){}
+}
+
+// ============ V5: SMART DEAL SCORE ALGORITHM ============
+// Score = f(likes, recency, discount%) with time decay
+function dealScore(d){
+  const ageH = (NOW - (d.ts||NOW)) / 3600000; // hours old
+  const recencyDecay = Math.exp(-ageH / 72); // 72h half-life
+  const discount = (d.o - d.n) / d.o; // 0 to 1
+  const popularity = Math.log1p(d.lk) / 6; // normalized log likes
+  const urgency = d.expiry ? Math.max(0, 1 - (d.expiry - NOW)/(48*3600000)) : 0;
+  return (popularity * 0.35) + (recencyDecay * 0.3) + (discount * 0.25) + (urgency * 0.1);
+}
+
+// ============ V5: SORT FUNCTION ============
+function sortDeals(list, mode){
+  const sorted = [...list];
+  switch(mode){
+    case 'score':    return sorted.sort((a,b)=>dealScore(b)-dealScore(a));
+    case 'discount': return sorted.sort((a,b)=>((b.o-b.n)/b.o)-((a.o-a.n)/a.o));
+    case 'price_asc':return sorted.sort((a,b)=>a.n-b.n);
+    case 'price_desc':return sorted.sort((a,b)=>b.n-a.n);
+    case 'popular':  return sorted.sort((a,b)=>b.lk-a.lk);
+    case 'recent':   return sorted.sort((a,b)=>(b.ts||0)-(a.ts||0));
+    default:         return sorted;
+  }
+}
+
+function setSort(mode, btn){
+  currentSort = mode;
+  document.querySelectorAll('.srt').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  render(cf);
+}
+
+// ============ V5: FUZZY SEARCH ALGORITHM ============
+// Levenshtein distance for fuzzy matching
+function levenshtein(a,b){
+  const m=a.length,n=b.length;
+  const dp=Array.from({length:m+1},(_,i)=>Array.from({length:n+1},(_,j)=>j===0?i:i===0?j:0));
+  for(let i=1;i<=m;i++) for(let j=1;j<=n;j++)
+    dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]:1+Math.min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]);
+  return dp[m][n];
+}
+
+// Score relevance of a deal to a query
+function searchScore(deal, query){
+  const q = query.toLowerCase().trim();
+  if(!q) return 0;
+  const fields = [deal.t.toLowerCase(), deal.s.toLowerCase(), catL(deal.cat).toLowerCase()];
+  let best = 0;
+  for(const field of fields){
+    // Exact substring match = highest
+    if(field.includes(q)){ best = Math.max(best, 1.0); continue; }
+    // Word-level matching
+    const words = q.split(' ');
+    const fieldWords = field.split(' ');
+    let wordMatches = 0;
+    for(const w of words){
+      if(w.length < 2) continue;
+      // Check each field word for close match
+      for(const fw of fieldWords){
+        const dist = levenshtein(w, fw.slice(0, w.length+2));
+        const threshold = w.length <= 3 ? 0 : w.length <= 5 ? 1 : 2;
+        if(dist <= threshold){ wordMatches++; break; }
+      }
+    }
+    if(words.length > 0) best = Math.max(best, wordMatches / words.length * 0.8);
+  }
+  return best;
+}
+
+// Highlight matching text
+function highlight(text, query){
+  if(!query.trim()) return text;
+  const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+  return text.replace(re, '<mark class="hl">$1</mark>');
+}
+
+// ============ V5: RELATED DEALS ALGORITHM ============
+// Recommend by: same category, similar price range (±50%), different shop
+function relatedDeals(deal, maxN=4){
+  const priceMin = deal.n * 0.5, priceMax = deal.n * 1.5;
+  return deals
+    .filter(d => d.id !== deal.id && d.co === deal.co && d.cat === deal.cat && d.n >= priceMin && d.n <= priceMax)
+    .sort((a,b) => dealScore(b) - dealScore(a))
+    .slice(0, maxN);
+}
+
+// ============ V5: COUNTDOWN TIMER ENGINE ============
+let countdownTimers = {};
+function startCountdowns(){
+  clearInterval(countdownTimers._master);
+  countdownTimers._master = setInterval(()=>{
+    document.querySelectorAll('[data-expiry]').forEach(el=>{
+      const expiry = parseInt(el.dataset.expiry);
+      const remaining = expiry - Date.now();
+      if(remaining <= 0){ el.textContent = '⏰ Expiré'; el.classList.add('urgent'); return; }
+      const h = Math.floor(remaining/3600000);
+      const m = Math.floor((remaining%3600000)/60000);
+      const s = Math.floor((remaining%60000)/1000);
+      const urgent = remaining < 3600000; // < 1h = urgent
+      el.classList.toggle('urgent', urgent);
+      if(h > 0) el.textContent = `⏰ ${h}h${m.toString().padStart(2,'0')}`;
+      else el.textContent = `⏰ ${m}m${s.toString().padStart(2,'0')}s`;
+    });
+  }, 1000);
+}
+
+// ============ BUILD COUNTRY PAGE ============
+// Convert flag emoji to Twemoji CDN image URL (guaranteed rendering on all browsers/OS)
+function flagImg(emoji){
+  const codepoints=[...emoji].map(c=>c.codePointAt(0).toString(16)).join('-');
+  return `https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/${codepoints}.png`;
+}
+
+function buildCP(){
+  const regions={europe:{label:'🇪🇺 Europe — Priorité',codes:[]},namerica:{label:'🌎 Amérique du Nord',codes:[]},africa:{label:'🌍 Afrique',codes:[]},asia:{label:'🌏 Asie',codes:[]},other:{label:'🌐 Autre',codes:[]}};
+  Object.entries(COUNTRIES).forEach(([code,c])=>{if(regions[c.region])regions[c.region].codes.push(code);});
+  let html='';
+  Object.values(regions).forEach(r=>{
+    if(!r.codes.length)return;
+    html+=`<div class="rl">${r.label}</div><div class="cg">`;
+    r.codes.forEach(code=>{
+      const c=COUNTRIES[code];
+      const cnt=deals.filter(d=>d.co===code).length;
+      const badge=cnt>0?`<strong>${cnt}</strong> deal${cnt>1?"s":""}`:`<span style="color:var(--fog)">Bientôt</span>`;
+      const fUrl=flagImg(c.f);
+      html+=`<div class="cc" onclick="pick('${code}')">
+        <img class="cc-flag" src="${fUrl}" alt="${c.n}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="cc-f" style="display:none;font-size:2.6rem;margin-bottom:.5rem;">${c.f}</div>
+        <div class="cc-n">${c.n}</div>
+        <div class="cc-c">${badge}</div>
+      </div>`;
+    });
+    html+=`</div>`;
+  });
+  document.getElementById('cpRegions').innerHTML=html;
+  autoDetect();
+}
+
+function pick(code){
+  cc=code;
+  document.getElementById('cp').classList.add('out');
+  setTimeout(()=>{
+    document.getElementById('cp').style.display='none';
+    document.getElementById('ms').classList.remove('hidden');
+    init();
+  },600);
+}
+
+function back(){
+  document.getElementById('ms').classList.add('hidden');
+  document.getElementById('supportFab').style.display='none';
+  document.getElementById('supportPanel').classList.remove('on');
+  document.getElementById('spMsgs').innerHTML='';
+  supportOpen=false;supportStep='init';
+  const cp=document.getElementById('cp');
+  cp.style.display='flex';cp.classList.remove('out');cc=null;saff=false;
+  buildCP();
+}
+
+// ============ INIT ============
+function init(){
+  const c=COUNTRIES[cc],t=TX[c.l]||TX.fr;
+  document.getElementById('cbf').textContent=c.f;
+  document.getElementById('cbn').textContent=c.n;
+  document.getElementById('hh').innerHTML=t.h;
+  document.getElementById('hp').textContent=t.d;
+  document.getElementById('hl').textContent=t.l;
+  buildFS();buildTicker();populateCountrySelect();cf='all';
+  document.querySelectorAll('.fil').forEach((b,i)=>b.classList.toggle('on',i===0));
+  document.getElementById('nlCatBar').style.display='none';
+  render('all');renderTop();updStats();
+  document.getElementById('supportFab').style.display='flex';
+  setTimeout(()=>{document.getElementById('sbt')?.classList.add('in');document.getElementById('sbn')?.classList.add('in');renderSidebarNewsletter();},500);
+}
+
+function buildFS(){
+  document.getElementById('fst').innerHTML=Object.keys(COUNTRIES).map(c=>`<button class="fb ${c===cc?'on':''}" onclick="swC('${c}')" title="${COUNTRIES[c].n}" style="font-family:'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif;-webkit-text-fill-color:initial;background-image:none;">${COUNTRIES[c].f}</button>`).join('');
+}
+
+function swC(code){
+  cc=code;const c=COUNTRIES[code],t=TX[c.l]||TX.fr;
+  document.getElementById('cbf').textContent=c.f;
+  document.getElementById('cbn').textContent=c.n;
+  document.getElementById('hh').innerHTML=t.h;
+  document.getElementById('hp').textContent=t.d;
+  buildFS();buildTicker();if(saff)buildAff();cf='all';
+  document.querySelectorAll('.fil').forEach((b,i)=>b.classList.toggle('on',i===0));
+  render('all');renderTop();updStats();toast(c.f,`Deals pour ${c.n}`);
+}
+
+function buildTicker(){
+  const allStores=Object.values(AFFS).flatMap(c=>c.s.map(s=>({...s,cf:c.f})));
+  const items=allStores.map(s=>`<div class="tk-it"><span>${s.cf}</span><span class="tk-s">${s.n}</span><span class="tk-p">${s.p}</span></div>`).join('');
+  document.getElementById('tkt').innerHTML=items+items;
+}
+
+function populateCountrySelect(){
+  const sel=document.getElementById('aco');
+  if(!sel)return;
+  sel.innerHTML=Object.entries(COUNTRIES).map(([k,c])=>`<option value="${k}">${c.f} ${c.n}</option>`).join('');
+}
+
+// ============ AFFILIATIONS PAGE ============
+function togAff(){
+  saff=!saff;
+  document.getElementById('dp2').style.display=saff?'none':'block';
+  document.getElementById('ap').classList.toggle('on',saff);
+  document.getElementById('atab').classList.toggle('on',saff);
+  if(saff)buildAff();
+}
+
+function buildAff(q=''){
+  const container=document.getElementById('afc');
+  // merge AFFS with COUNTRIES so dynamic countries also show
+  const entries=Object.entries(AFFS);
+  container.innerHTML=entries.map(([k,d])=>{
+    const fil=q?d.s.filter(s=>s.n.toLowerCase().includes(q.toLowerCase())):d.s;
+    if(!fil.length)return'';
+    const isOpen=k===cc||q;
+    return`<div class="acs ${isOpen?'open':''}" id="ac-${k}">
+      <div class="ach" onclick="togAcs('${k}')">
+        <span class="ac-f">${d.f}</span><span class="ac-n">${d.n}</span>
+        <span class="ac-c">${fil.length} partenaires</span><span class="ac-ch">▼</span>
+      </div>
+      <div class="acl">${fil.map(s=>`<div class="acard" onclick="window.open('${s.u}','_blank')">
+        <div class="act"><span class="acn">${s.n}</span><span class="acp">${s.p}</span></div>
+        <p class="acd">${s.d}</p>
+        <button class="acb">Rejoindre →</button>
+      </div>`).join('')}</div>
+    </div>`;
+  }).join('');
+}
+
+function togAcs(k){document.getElementById(`ac-${k}`)?.classList.toggle('open');}
+function filtAff(v){buildAff(v);if(v)document.querySelectorAll('.acs').forEach(s=>s.classList.add('open'));}
+
+// ============ SEARCH ============
+function oso(){document.getElementById('so').classList.add('on');setTimeout(()=>document.getElementById('si').focus(),100);}
+function cso(e){if(e.target===document.getElementById('so'))csoB();}
+function csoB(){document.getElementById('so').classList.remove('on');document.getElementById('si').value='';document.getElementById('sr').innerHTML='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')csoB();});
+
+function doS(v){
+  const sr=document.getElementById('sr');
+  if(!v.trim()){sr.innerHTML='';return;}
+  
+  // V5: Score all deals by search relevance
+  const scored = deals
+    .map(d=>({d, score: searchScore(d, v)}))
+    .filter(x=>x.score>0.1)
+    .sort((a,b)=>b.score-a.score);
+
+  if(!scored.length){
+    // V5: Suggest closest match
+    const bestGuess = deals.map(d=>({d, dist:levenshtein(v.toLowerCase(),d.t.toLowerCase().slice(0,v.length+3))}))
+      .sort((a,b)=>a.dist-b.dist)[0];
+    sr.innerHTML=`<div class="smt">😔 Aucun résultat pour "<strong>${v}</strong>"${bestGuess&&bestGuess.dist<=4?`<br><small style="color:var(--fog);">Vouliez-vous dire : <em>${bestGuess.d.t}</em> ?</small>`:''}</div>`;
+    return;
+  }
+  
+  sr.innerHTML=scored.slice(0,8).map(({d})=>{
+    const c=COUNTRIES[d.co],disc=Math.round((1-d.n/d.o)*100);
+    const titleHl = highlight(d.t, v);
+    return`<div class="sri" onclick="goD('${d.co}')">
+      <img class="sri-img" src="${getImg(d)}" onerror="this.src='${IMG_MAP[d.cat]}'">
+      <div style="flex:1"><div class="sri-t">${titleHl}</div><div class="sri-m">${c?c.f:''} ${c?c.n:d.co} · via ${d.s} · -${disc}%</div></div>
+      <span class="sri-p">${d.n.toLocaleString()}${c?c.c:''}</span>
+    </div>`;
+  }).join('');
+}
+
+function goD(code){
+  csoB();
+  if(COUNTRIES[code]&&code!==cc)swC(code);
+  saff=false;document.getElementById('dp2').style.display='block';
+  document.getElementById('ap').classList.remove('on');document.getElementById('atab').classList.remove('on');
+}
+
+// ============ RENDER DEALS ============
+// ============ RENDER DEALS (V5) ============
+function render(f){
+  const g=document.getElementById('dg'),c=COUNTRIES[cc];
+  let list=deals.filter(d=>d.co===cc);
+  if(f!=='all')list=list.filter(d=>d.cat===f);
+  
+  // V5: Sort
+  list = sortDeals(list, currentSort);
+  
+  // V5: Update deal count tag
+  const countTag = document.getElementById('dealCountTag');
+  if(countTag) countTag.textContent = `${list.length} deal${list.length!==1?'s':''}`;
+
+  if(!list.length){g.innerHTML=`<div class="emp"><div class="emp-i">🔍</div><div class="emp-t">Aucun deal pour ${c?c.n:cc}</div><p style="font-size:.8rem;">Revenez bientôt !</p></div>`;return;}
+  g.innerHTML='';
+  
+  // V5: Compute scores for normalization
+  const scores = list.map(d=>dealScore(d));
+  const maxScore = Math.max(...scores,0.001);
+  
+  // V5: Top 3 trending deals
+  const trendingIds = [...list].sort((a,b)=>dealScore(b)-dealScore(a)).slice(0,3).map(d=>d.id);
+  
+  list.forEach((d,i)=>{
+    const disc=Math.round((1-d.n/d.o)*100),bc=d.b==='hot'?'bh':d.b==='new'?'bi':'bg2',bt=d.b==='hot'?'🔥 HOT':d.b==='new'?'✨ NEW':'👑 TOP';
+    const co=COUNTRIES[cc]||{f:'',c:''};
+    const imgSrc=getImg(d);
+    const card=document.createElement('div');card.className='dc';
+    const delBtn=cu?.isAdmin?`<button class="del-btn" onclick="delDeal(${d.id},event)" title="Supprimer ce deal">🗑️</button>`:'';
+    const cmtCount=(comments[d.id]||[]).length;
+    
+    // V5: Score bar
+    const score = dealScore(d);
+    const scorePct = Math.round((score/maxScore)*100);
+    const scoreBar = `<div class="score-bar-wrap">
+      <div class="score-label"><span>Score deal ⚡</span><span>${scorePct}%</span></div>
+      <div class="score-bar" style="width:${scorePct}%"></div>
+    </div>`;
+    
+    // V5: Countdown
+    const countdownHtml = d.expiry ? `<span class="dc-countdown" data-expiry="${d.expiry}">⏰ ...</span>` : '';
+    
+    // V5: Trending ribbon
+    const trendingHtml = trendingIds.includes(d.id) ? `<div class="trending-ribbon">🔥 Trending</div>` : '';
+    
+    card.innerHTML=`
+      <div class="dc-img-wrap" style="position:relative;">
+        <img class="dc-img" src="${imgSrc}" alt="${d.t}" onerror="this.src='${IMG_MAP[d.cat]||IMG_MAP.tech}'">
+        <div class="dc-badge ${bc}" style="position:absolute;top:12px;left:12px;z-index:2;">${bt}</div>
+        <div class="dc-ct" style="position:absolute;top:12px;right:12px;z-index:2;">${co.f}</div>
+        ${trendingHtml}
+      </div>
+      <div class="dc-body">
+        ${scoreBar}
+        <div class="dc-cat">${catL(d.cat)}</div>
+        <div class="dc-t">${d.t}</div>
+        <div class="dc-pr">
+          <span class="dc-nw">${d.n.toLocaleString()}${co.c}</span>
+          <span class="dc-ol">${d.o.toLocaleString()}${co.c}</span>
+          <span class="dc-pc">-${disc}%</span>
+          ${countdownHtml}
+        </div>
+        <div class="dc-ft">
+          <button class="lkb ${d.liked?'on':''}" onclick="lk(${d.id},event)">
+            <span class="h">${d.liked?'❤️':'🤍'}</span><span id="lc${d.id}">${d.lk}</span>
+          </button>
+          <button class="comment-btn" onclick="openComments(${d.id},event)">💬 ${cmtCount>0?cmtCount:''}</button>
+          <span class="dc-st">via ${d.s}</span>
+          ${delBtn}
+          <a class="gb" href="${d.l}" target="_blank">Voir →</a>
+        </div>
+      </div>`;
+    g.appendChild(card);
+    setTimeout(()=>card.classList.add('in'),i*60);
+  });
+  
+  // V5: Start countdown timers
+  startCountdowns();
+  
+  // V5: Related deals section (show for filtered category)
+  if(f !== 'all' && list.length > 0){
+    const relSection = document.createElement('div');
+    relSection.className = 'related-section';
+    const altCatDeals = deals.filter(d=>d.co===cc && d.cat!==f).sort((a,b)=>dealScore(b)-dealScore(a)).slice(0,4);
+    if(altCatDeals.length){
+      const co = COUNTRIES[cc]||{c:''};
+      relSection.innerHTML = `<div class="related-title">🔎 Vous aimerez aussi</div>
+        <div class="related-grid">${altCatDeals.map(d=>{
+          const dp=Math.round((1-d.n/d.o)*100);
+          return`<div class="rel-card" onclick="flt('${d.cat}',document.querySelector('.fil:nth-child(${['all','tech','gaming','mode','maison','food','voyage'].indexOf(d.cat)+1})'))">
+            <img class="rel-img" src="${getImg(d)}" onerror="this.src='${IMG_MAP[d.cat]}'">
+            <div class="rel-body">
+              <div class="rel-t">${d.t}</div>
+              <div class="rel-pr"><span class="rel-nw">${d.n.toLocaleString()}${co.c}</span><span class="rel-pc">-${dp}%</span></div>
+            </div>
+          </div>`;
+        }).join('')}</div>`;
+      g.appendChild(relSection);
+    }
+  }
+}
+
+function catL(c){return{tech:'💻 Tech',gaming:'🎮 Gaming',mode:'👗 Mode',maison:'🏠 Maison',food:'🍕 Food',voyage:'✈️ Voyage'}[c]||c;}
+
+function renderTop(){
+  const top=[...deals.filter(d=>d.co===cc)].sort((a,b)=>b.lk-a.lk).slice(0,5);
+  const co=COUNTRIES[cc]||{c:''};
+  document.getElementById('tl').innerHTML=top.map(d=>`
+    <div class="tdi">
+      <img class="tdi-img" src="${getImg(d)}" alt="${d.t}" onerror="this.src='${IMG_MAP[d.cat]||IMG_MAP.tech}'">
+      <div><div class="tdi-n">${d.t.slice(0,22)}...</div>
+      <div class="tdi-p">${d.n.toLocaleString()}${co.c} · ❤️ ${d.lk}</div></div>
+    </div>`).join('');
+}
+
+function updStats(){
+  const cd=deals.filter(d=>d.co===cc),co=COUNTRIES[cc]||{c:''};
+  aN('sd',cd.length);aN('sm',users.length);
+  const sv=cd.reduce((a,d)=>a+(d.o-d.n),0);
+  setTimeout(()=>document.getElementById('ss').textContent=sv.toLocaleString()+co.c,500);
+}
+
+function aN(id,target){const el=document.getElementById(id);let n=0;const step=Math.max(1,Math.ceil(target/20));const iv=setInterval(()=>{n=Math.min(n+step,target);el.textContent=n;if(n>=target)clearInterval(iv);},60);}
+
+function flt(f,btn){cf=f;document.querySelectorAll('.fil').forEach(b=>b.classList.remove('on'));btn.classList.add('on');showNlCatBar(f);render(f);}
+
+// ============ LIKES & DELETE ============
+function lk(id,e){
+  e.stopPropagation();
+  if(!cu){toast('🔒','Connecte-toi pour liker !');return;}
+  const d=deals.find(x=>x.id===id);if(!d)return;
+  d.liked=!d.liked;d.lk+=d.liked?1:-1;
+  persistLikes();
+  render(cf);renderTop();
+  if(d.liked)toast('❤️','Deal ajouté aux favoris !');
+}
+
+function delDeal(id,e){
+  e.stopPropagation();
+  if(!cu?.isAdmin)return;
+  if(!confirm('Supprimer ce deal ? Il n\'est plus en solde ?'))return;
+  deals=deals.filter(d=>d.id!==id);
+  render(cf);renderTop();updStats();
+  toast('🗑️','Deal supprimé !');
+}
+
+// ============ AUTH ============
+function login(){
+  const e=document.getElementById('le').value,p=document.getElementById('lp').value;
+  const u=users.find(x=>x.email===e&&x.password===p);
+  if(!u){toast('❌','Email ou mot de passe incorrect');return;}
+  cu=u;persistUser();navU();cm('lm');toast('👋',`Bienvenue ${u.name} !`);render(cf);
+}
+function reg(){
+  const n=document.getElementById('rn').value,e=document.getElementById('re').value,p=document.getElementById('rp').value;
+  if(!n||!e||!p){toast('⚠️','Remplis tous les champs');return;}
+  if(users.find(u=>u.email===e)){toast('❌','Email déjà utilisé');return;}
+  const u={name:n,email:e,password:p,isAdmin:false};users.push(u);cu=u;persistUser();navU();cm('rm');toast('🎉',`Bienvenue ${n} !`);updStats();render(cf);
+}
+function lo(){cu=null;persistUser();document.getElementById('nrl').style.display='flex';document.getElementById('un').classList.add('hidden');document.getElementById('aw').classList.add('hidden');document.getElementById('spNotif').style.display='none';toast('👋','À bientôt !');render(cf);}
+function navU(){
+  document.getElementById('nrl').style.display='none';
+  const un=document.getElementById('un');un.classList.remove('hidden');un.style.display='flex';
+  document.getElementById('uname').textContent=cu.name;
+  document.getElementById('uav').textContent=cu.name[0].toUpperCase();
+  document.getElementById('supportFab').style.display='flex';
+  renderSidebarNewsletter();
+  // V5: If support panel is open and was in needLogin state, refresh it
+  if(supportOpen && supportStep==='needLogin'){
+    document.getElementById('spMsgs').innerHTML='';
+    document.getElementById('spQuick').innerHTML='';
+    initSupportChat();
+  }
+}
+function tadm(){
+  if(!cu?.isAdmin){toast('🔒','Accès admin uniquement');return;}
+  const a=document.getElementById('aw');a.classList.toggle('hidden');
+  if(!a.classList.contains('hidden')){
+    saff=false;document.getElementById('dp2').style.display='block';
+    document.getElementById('ap').classList.remove('on');document.getElementById('atab').classList.remove('on');
+    a.scrollIntoView({behavior:'smooth'});
+    buildEcList();
+  }
+}
+
+// ============ ADMIN TABS ============
+function swTab(tab,btn){
+  adminTab=tab;
+  document.querySelectorAll('.adp-tab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('tab-deals').style.display=tab==='deals'?'block':'none';
+  document.getElementById('tab-countries').style.display=tab==='countries'?'block':'none';
+  document.getElementById('tab-inbox').style.display=tab==='inbox'?'block':'none';
+  if(tab==='countries')buildEcList();
+  if(tab==='inbox')buildInbox();
+}
+
+// ============ ADD DEAL ============
+function prevImg(url){
+  const p=document.getElementById('imgPrev'),el=document.getElementById('prevImgEl');
+  if(url){p.style.display='block';el.src=url;}else{p.style.display='none';}
+}
+
+function addD(){
+  const t=document.getElementById('at').value,n=parseFloat(document.getElementById('anp').value),
+        o=parseFloat(document.getElementById('aop').value),s=document.getElementById('as').value,
+        l=document.getElementById('al').value||'#',img=document.getElementById('aimg').value||'',
+        cat=document.getElementById('ac').value,b=document.getElementById('ab').value,
+        co=document.getElementById('aco').value;
+  if(!t||!n||!o||!s){toast('⚠️','Remplis les champs obligatoires');return;}
+  const newId=Date.now();
+  deals.unshift({id:newId,t,cat,n,o,s,l,img,b,lk:0,liked:false,co});
+  if(DEAL_IMGS)DEAL_IMGS[newId]=img||IMG_MAP[cat];
+  if(co===cc)render(cf);
+  renderTop();updStats();
+  toast('✅',`Publié pour ${COUNTRIES[co]?.f||''} ${COUNTRIES[co]?.n||co} !`);
+  ['at','anp','aop','as','al','aimg'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('imgPrev').style.display='none';
+}
+
+// ============ ADD/REMOVE COUNTRY ============
+function prevCountry(){
+  const flag=document.getElementById('cFlag').value||'🏳️';
+  const name=document.getElementById('cName').value||'Aperçu';
+  document.getElementById('cprev').textContent=`${flag} ${name}`;
+}
+
+function addCountry(){
+  const flag=document.getElementById('cFlag').value.trim();
+  const name=document.getElementById('cName').value.trim();
+  const code=document.getElementById('cCode').value.trim().toLowerCase();
+  const cur=document.getElementById('cCur').value.trim()||'€';
+  const region=document.getElementById('cRegion').value;
+  const dealCount=parseInt(document.getElementById('cDeals').value)||0;
+  if(!flag||!name||!code){toast('⚠️','Remplis le drapeau, le nom et le code pays');return;}
+  if(COUNTRIES[code]){toast('❌',`Le pays avec le code "${code}" existe déjà !`);return;}
+  COUNTRIES[code]={n:name,f:flag,c:cur,l:'fr',region,deals:dealCount};
+  AFFS[code]={n:name,f:flag,s:[{n:`Marketplace ${name}`,p:'Variable',d:`Programme d'affiliation pour ${name}.`,u:'#'}]};
+  buildFS();buildTicker();populateCountrySelect();buildEcList();
+  toast('🌍',`${flag} ${name} ajouté au site !`);
+  ['cFlag','cName','cCode','cCur','cDeals'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('cprev').textContent='🏳️ Aperçu du pays';
+}
+
+function removeCountry(code){
+  if(!confirm(`Supprimer ${COUNTRIES[code]?.n} ? Tous ses deals seront aussi supprimés.`))return;
+  delete COUNTRIES[code];
+  deals=deals.filter(d=>d.co!==code);
+  buildFS();buildTicker();populateCountrySelect();buildEcList();
+  if(cc===code){cc=Object.keys(COUNTRIES)[0];swC(cc);}
+  toast('🗑️','Pays supprimé !');
+}
+
+function buildEcList(){
+  document.getElementById('ecList').innerHTML=Object.entries(COUNTRIES).map(([k,c])=>`
+    <div class="ec-item">
+      <div class="ec-info"><span>${c.f}</span><span>${c.n}</span></div>
+      <button class="ec-del" onclick="removeCountry('${k}')" title="Supprimer ce pays">🗑️</button>
+    </div>`).join('');
+}
+
+// ============ NEWSLETTER (V5 — login-gated + email verification) ============
+// Pending verifications: {email, token, cat, country, ts}
+let pendingVerif = {};
+
+function renderSidebarNewsletter(){
+  const el = document.getElementById('sbnContent');
+  if(!el) return;
+  if(!cu){
+    el.innerHTML=`<p style="font-size:.75rem;color:var(--fog);margin-bottom:.7rem;">🔒 Connecte-toi pour activer les alertes deals</p>
+      <button class="mb" style="margin-bottom:0;" onclick="om('lm')">Se connecter</button>`;
+  } else {
+    const alreadySub = subs.includes(cu.email);
+    if(alreadySub){
+      el.innerHTML=`<div style="display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--jade);">✅ Abonné(e) avec<br><strong>${cu.email}</strong></div>`;
+    } else {
+      el.innerHTML=`<p style="font-size:.75rem;color:var(--fog);margin-bottom:.7rem;">Tu recevras les deals sur : <strong style="color:var(--snow);">${cu.email}</strong></p>
+        <button class="mb" style="margin-bottom:0;" onclick="subVerified()">🔔 Activer les alertes</button>`;
+    }
+  }
+}
+
+function subVerified(){
+  if(!cu){ toast('🔒','Connecte-toi d\'abord !'); om('lm'); return; }
+  if(subs.includes(cu.email)){ toast('ℹ️','Déjà abonné(e) !'); return; }
+  // Simulate sending verification email
+  const token = Math.random().toString(36).slice(2,10).toUpperCase();
+  pendingVerif[cu.email] = { token, ts: Date.now() };
+  // In real app: send email. Here: show verification modal
+  showVerifModal(cu.email, token, null, null);
+}
+
+function showVerifModal(email, token, cat, country){
+  // Create/reuse verif modal
+  let vm = document.getElementById('verifModal');
+  if(!vm){
+    vm = document.createElement('div');
+    vm.id = 'verifModal';
+    vm.className = 'ov';
+    vm.innerHTML = `<div class="mo">
+      <button class="mc" onclick="cm('verifModal')">×</button>
+      <h2>📧 Vérification email</h2>
+      <p id="vmDesc"></p>
+      <div style="background:var(--ink3);border:1px solid var(--line2);border-radius:12px;padding:1rem;text-align:center;margin-bottom:1rem;">
+        <div style="font-size:.7rem;color:var(--fog);margin-bottom:.3rem;">Code envoyé à</div>
+        <div style="font-weight:700;" id="vmEmail"></div>
+        <div style="font-size:1.6rem;font-weight:800;color:var(--ice);letter-spacing:4px;margin-top:.5rem;" id="vmToken"></div>
+        <div style="font-size:.65rem;color:var(--fog);margin-top:.3rem;">(simulation — en prod ceci serait reçu par email)</div>
+      </div>
+      <input class="mi" type="text" placeholder="Entrez le code reçu" id="vmInput" maxlength="8" style="text-align:center;letter-spacing:3px;font-size:1.1rem;">
+      <button class="mb" style="margin-bottom:0;" onclick="confirmVerif()">✅ Confirmer</button>
+    </div>`;
+    document.body.appendChild(vm);
+    vm.addEventListener('click', e=>{ if(e.target===vm) cm('verifModal'); });
+  }
+  document.getElementById('vmDesc').textContent = cat
+    ? `Pour recevoir les alertes deals ${CAT_LABELS[cat]||cat}, confirme ton adresse email.`
+    : 'Pour activer la newsletter, confirme ton adresse email.';
+  document.getElementById('vmEmail').textContent = email;
+  document.getElementById('vmToken').textContent = token;
+  document.getElementById('vmInput').value = '';
+  vm.dataset.cat = cat||'';
+  vm.dataset.country = country||'';
+  om('verifModal');
+}
+
+function confirmVerif(){
+  const input = document.getElementById('vmInput').value.trim().toUpperCase();
+  const email = cu?.email;
+  if(!email || !pendingVerif[email]){ toast('❌','Aucune vérification en attente'); return; }
+  if(input !== pendingVerif[email].token){ toast('❌','Code incorrect. Réessaie.'); return; }
+  
+  delete pendingVerif[email];
+  const cat = document.getElementById('verifModal').dataset.cat;
+  const country = document.getElementById('verifModal').dataset.country;
+  cm('verifModal');
+
+  if(cat){
+    // Category alert sub
+    const co = COUNTRIES[country]||COUNTRIES[cc]||{n:cc,f:''};
+    nlCatSubs.push({email,cat,country:country||cc,countryName:co.n,countryFlag:co.f,time:new Date().toLocaleString('fr-FR'),verified:true});
+    updateInboxCount();
+    document.getElementById('nlCatBar').innerHTML=`<div class="nl-cat-inner" style="justify-content:center;">
+      <span style="font-size:1.4rem;">✅</span>
+      <div><strong style="font-size:.9rem;">Email vérifié ! Alertes activées.</strong><br>
+      <span style="font-size:.78rem;color:var(--fog);">Tu recevras les prochains deals ${CAT_LABELS[cat]} en ${co.n} sur <strong>${email}</strong></span></div>
+    </div>`;
+    toast('🎉',`Alertes ${CAT_LABELS[cat]} activées pour ${co.n} !`);
+  } else {
+    // General newsletter
+    if(!subs.includes(email)) subs.push(email);
+    toast('🎉','Abonnement confirmé ! Deals dans ta boîte 🔥');
+    renderSidebarNewsletter();
+  }
+}
+
+function showNlCatBar(cat){
+  const bar = document.getElementById('nlCatBar');
+  const co = COUNTRIES[cc]||{n:cc};
+  if(cat === 'all'){bar.style.display='none';return;}
+  bar.style.display='block';
+  
+  // Already subscribed?
+  const already = cu && nlCatSubs.find(s=>s.email===cu.email&&s.cat===cat&&s.country===cc);
+  
+  let formHtml;
+  if(already){
+    formHtml=`<div style="display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--jade);">✅ Alertes activées</div>`;
+  } else if(!cu){
+    formHtml=`<button class="mb" style="margin-bottom:0;padding:.5rem 1rem;font-size:.78rem;" onclick="om('lm')">🔒 Se connecter pour les alertes</button>`;
+  } else {
+    formHtml=`<div class="nl-cat-form">
+      <span style="font-size:.78rem;padding:.65rem 1rem;color:var(--fog);">📧 ${cu.email}</span>
+      <button onclick="subCat('${cat}')">🔔 Alertes</button>
+    </div>`;
+  }
+  
+  bar.innerHTML=`<div class="nl-cat-inner">
+    <span class="nl-cat-icon">${CAT_ICONS[cat]||'🔔'}</span>
+    <div class="nl-cat-txt">
+      <strong>Recevoir les nouveaux deals ${CAT_LABELS[cat]||cat} en ${co.n}</strong>
+      <span>Alertes email vérifiées — aucun spam garanti</span>
+    </div>
+    ${formHtml}
+  </div>`;
+}
+
+function subCat(cat){
+  if(!cu){ toast('🔒','Connecte-toi pour activer les alertes !'); om('lm'); return; }
+  const already = nlCatSubs.find(s=>s.email===cu.email&&s.cat===cat&&s.country===cc);
+  if(already){ toast('ℹ️','Déjà abonné(e) pour cette catégorie !'); return; }
+  // Send verification
+  const token = Math.random().toString(36).slice(2,10).toUpperCase();
+  pendingVerif[cu.email] = { token, ts: Date.now() };
+  showVerifModal(cu.email, token, cat, cc);
+}
+
+// ============ MODALS ============
+function om(id){document.getElementById(id).classList.add('on');}
+function cm(id){document.getElementById(id).classList.remove('on');}
+function sm(a,b){cm(a);setTimeout(()=>om(b),200);}
+document.querySelectorAll('.ov').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('on');}));
+
+function toast(icon,msg){const t=document.getElementById('toast');document.getElementById('ti').textContent=icon;document.getElementById('tm').textContent=msg;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3200);}
+
+// ============ AUTO DETECT ============
+function autoDetect(){
+  const lang=(navigator.language||'fr').split('-'),code=lang[0].toLowerCase(),reg=lang[1]?.toLowerCase();
+  const map={fr:'fr',en:reg==='gb'?'gb':'us',de:'de',es:'es',it:'it',ar:'dz'};
+  const det=map[code];
+  if(det&&COUNTRIES[det]){
+    document.querySelectorAll('.cc').forEach(card=>{
+      if(card.getAttribute('onclick')===`pick('${det}')`){
+        card.style.boxShadow='0 0 0 2px rgba(255,45,85,.6),0 16px 40px rgba(255,45,85,.2)';
+        const tag=document.createElement('div');tag.className='dp';tag.textContent='📍 Détecté';
+        card.appendChild(tag);
+      }
+    });
+  }
+}
+
+// ============ DATA STORES ============
+let comments = {}; // {dealId: [{id, user, text, time, likes, liked}]}
+let nlCatSubs = []; // {email, cat, country, time}
+let supportTickets = []; // {id, user, msg, budget, time, country}
+let currentDealId = null;
+let supportOpen = false;
+let supportStep = 'init'; // init | category | budget | done
+let supportCat = '';
+
+// ============ NEWSLETTER CATEGORY BAR ============
+const CAT_LABELS = {all:'tous les deals',tech:'Tech',gaming:'Gaming',mode:'Mode',maison:'Maison',food:'Food',voyage:'Voyage'};
+const CAT_ICONS = {all:'⚡',tech:'💻',gaming:'🎮',mode:'👗',maison:'🏠',food:'🍕',voyage:'✈️'};
+
+function showNlCatBar(cat){
+  const bar = document.getElementById('nlCatBar');
+  const co = COUNTRIES[cc]||{n:cc};
+  if(cat === 'all'){bar.style.display='none';return;}
+  bar.style.display='block';
+  bar.innerHTML=`<div class="nl-cat-inner">
+    <span class="nl-cat-icon">${CAT_ICONS[cat]||'🔔'}</span>
+    <div class="nl-cat-txt">
+      <strong>Recevoir les nouveaux deals ${CAT_LABELS[cat]||cat} en ${co.n}</strong>
+      <span>Sois alerté(e) par email dès qu'un nouveau deal est posté dans cette catégorie</span>
+    </div>
+    <div class="nl-cat-form">
+      <input type="email" id="nlCatEmail" placeholder="votre@gmail.com">
+      <button onclick="subCat('${cat}')">🔔 Alertes</button>
+    </div>
+  </div>`;
+}
+
+
+// ============ COMMENTS ============
+function openComments(dealId, e){
+  if(e)e.stopPropagation();
+  currentDealId = dealId;
+  const d = deals.find(x=>x.id===dealId);
+  if(!d)return;
+  const co = COUNTRIES[d.co]||{c:'',f:''};
+  document.getElementById('cpDealInfo').innerHTML=`
+    <img class="cp-deal-img" src="${getImg(d)}" onerror="this.src='${IMG_MAP[d.cat]||IMG_MAP.tech}'">
+    <div><div class="cp-deal-name">${d.t}</div><div class="cp-deal-price">${d.n.toLocaleString()}${co.c} via ${d.s}</div></div>`;
+  renderComments(dealId);
+  document.getElementById('commentsOv').classList.add('on');
+  document.body.style.overflow='hidden';
+  if(!cu){
+    document.getElementById('commentLoginMsg').classList.remove('hidden');
+    document.getElementById('commentInputRow').style.display='none';
+  } else {
+    document.getElementById('commentLoginMsg').classList.add('hidden');
+    document.getElementById('commentInputRow').style.display='flex';
+  }
+}
+
+function renderComments(dealId){
+  const list = comments[dealId]||[];
+  const el = document.getElementById('commentsList');
+  if(!list.length){el.innerHTML=`<div class="no-comments">Sois le premier à commenter ce deal ! 💬</div>`;return;}
+  el.innerHTML = list.map(c=>`
+    <div class="comment-item">
+      <div class="comment-top">
+        <div class="comment-av">${c.user[0].toUpperCase()}</div>
+        <span class="comment-name">${c.user}</span>
+        <span class="comment-time">${c.time}</span>
+      </div>
+      <div class="comment-text">${c.text}</div>
+      <button class="comment-lk ${c.liked?'on':''}" onclick="likeComment(${dealId},${c.id})">
+        ${c.liked?'❤️':'🤍'} ${c.likes>0?c.likes:''}
+      </button>
+    </div>`).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+function postComment(){
+  if(!cu){toast('🔒','Connecte-toi pour commenter !');return;}
+  const txt = document.getElementById('commentText').value.trim();
+  if(!txt){toast('⚠️','Écris quelque chose !');return;}
+  if(!comments[currentDealId])comments[currentDealId]=[];
+  comments[currentDealId].push({id:Date.now(),user:cu.name,text:txt,time:new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}),likes:0,liked:false});
+  document.getElementById('commentText').value='';
+  renderComments(currentDealId);
+  render(cf);
+  toast('💬','Commentaire publié !');
+}
+
+function likeComment(dealId, cmtId){
+  if(!cu){toast('🔒','Connecte-toi !');return;}
+  const c = (comments[dealId]||[]).find(x=>x.id===cmtId);
+  if(!c)return;
+  c.liked=!c.liked;c.likes+=c.liked?1:-1;
+  renderComments(dealId);
+}
+
+function closeComments(){document.getElementById('commentsOv').classList.remove('on');document.body.style.overflow='';}
+function closeCommentsOv(e){if(e.target===document.getElementById('commentsOv'))closeComments();}
+
+// ============ SUPPORT CHAT (V5 — login-gated + ordre: catégorie → objet → prix) ============
+const BOT_MSGS = {
+  needLogin: [`🔒 Le chat est réservé aux membres DealFlash.<br>Connecte-toi pour discuter avec notre équipe et faire des demandes de deals personnalisées.`],
+  init: [`Bonjour <strong id="chatUsername"></strong> ! 👋 Je suis l'assistant DealFlash.<br>Je vais t'aider à trouver le meilleur deal.`, `Dans quelle <strong>catégorie</strong> cherches-tu un deal ?`],
+  object: (cat) => [`Super ! Tu cherches dans <strong>${cat}</strong>. 🎯<br>Quel <strong>produit ou objet précis</strong> recherches-tu ? (Ex: "iPhone 15 Pro", "Aspirateur sans fil"...)`],
+  details: [`Parfait ! Des <strong>détails supplémentaires</strong> ? (marque, couleur, taille, modèle...)<br>Ou tape <em>"Pas de préférence"</em> pour continuer.`],
+  budget: [`Compris ! 💪 Quel est ton <strong>budget maximum</strong> ?`],
+  confirm: (cat, obj, details, budget, country, email) => [`Demande envoyée ! 🔥<br><br>📋 <strong>Récap :</strong><br>• Catégorie : ${cat}<br>• Produit : <strong>${obj}</strong><br>• Détails : ${details||'Aucun'}<br>• Budget max : <strong>${budget}</strong><br>• Pays : ${country}<br>• Email : ${email}<br><br>Notre équipe reviendra vers toi dès qu'on trouve ça ! ✅`],
+};
+
+let supportObj = '';
+let supportDetails = '';
+
+// Budget options adapted to country currency
+function getBudgetOptions(){
+  const co = COUNTRIES[cc]||{c:'€',n:''};
+  const cur = co.c;
+  // Define budget ranges per currency
+  const ranges = {
+    '€':   ['< 50€','50–100€','100–200€','200–500€','500€+','Flexible'],
+    '£':   ['< 50£','50–100£','100–200£','200–500£','500£+','Flexible'],
+    '$':   ['< 50$','50–100$','100–300$','300–700$','700$+','Flexible'],
+    'CA$': ['< 50 CA$','50–150 CA$','150–300 CA$','300–700 CA$','700 CA$+','Flexible'],
+    'CHF': ['< 50 CHF','50–100 CHF','100–250 CHF','250–600 CHF','600 CHF+','Flexible'],
+    'DA':  ['< 5 000 DA','5 000–15 000 DA','15 000–40 000 DA','40 000–100 000 DA','100 000 DA+','Flexible'],
+    'MAD': ['< 500 MAD','500–1 500 MAD','1 500–4 000 MAD','4 000–10 000 MAD','10 000 MAD+','Flexible'],
+    'TND': ['< 100 TND','100–300 TND','300–800 TND','800–2 000 TND','2 000 TND+','Flexible'],
+    'FCFA':['< 25 000 FCFA','25 000–75 000 FCFA','75 000–200 000 FCFA','200 000–500 000 FCFA','500 000 FCFA+','Flexible'],
+  };
+  return ranges[cur] || ranges['€'];
+}
+
+function togSupport(){
+  supportOpen=!supportOpen;
+  document.getElementById('supportPanel').classList.toggle('on',supportOpen);
+  if(supportOpen && document.getElementById('spMsgs').children.length===0){
+    initSupportChat();
+  }
+}
+
+function initSupportChat(){
+  const msgs = document.getElementById('spMsgs');
+  msgs.innerHTML='';
+  document.getElementById('spQuick').innerHTML='';
+  supportObj=''; supportDetails=''; supportCat='';
+
+  if(!cu){
+    supportStep='needLogin';
+    BOT_MSGS.needLogin.forEach((m,i)=>setTimeout(()=>addBotMsg(m),i*400));
+    setTimeout(()=>{
+      document.getElementById('spQuick').innerHTML=`
+        <button class="sp-qbtn" onclick="cm_sp();om('lm')">🔑 Se connecter</button>
+        <button class="sp-qbtn" onclick="cm_sp();om('rm')">✨ S'inscrire</button>`;
+      document.getElementById('spInput').disabled=true;
+      document.getElementById('spInput').placeholder='Connecte-toi pour discuter...';
+    }, 800);
+    return;
+  }
+
+  document.getElementById('spInput').disabled=false;
+  document.getElementById('spInput').placeholder='Écris ton message...';
+  supportStep='category';
+  BOT_MSGS.init.forEach((m,i)=>setTimeout(()=>{
+    addBotMsg(m);
+    setTimeout(()=>{ const el=document.getElementById('chatUsername'); if(el)el.textContent=cu.name; },50);
+  },i*600));
+  setTimeout(()=>showQuickCats(), 1400);
+}
+
+function cm_sp(){
+  supportOpen=false;
+  document.getElementById('supportPanel').classList.remove('on');
+}
+
+function addBotMsg(html){
+  const msgs = document.getElementById('spMsgs');
+  const div = document.createElement('div');
+  div.className='sp-msg bot'; div.innerHTML=html;
+  msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight;
+}
+
+function addUserMsg(txt){
+  const msgs = document.getElementById('spMsgs');
+  const div = document.createElement('div');
+  div.className='sp-msg user'; div.textContent=txt;
+  msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight;
+}
+
+function showQuickCats(){
+  document.getElementById('spQuick').innerHTML=
+    ['💻 Tech','🎮 Gaming','👗 Mode','🏠 Maison','🍕 Food','✈️ Voyage','🔀 Autre']
+    .map(c=>`<button class="sp-qbtn" onclick="selectCat('${c}')">${c}</button>`).join('');
+}
+
+function selectCat(cat){
+  supportCat=cat; addUserMsg(cat);
+  document.getElementById('spQuick').innerHTML='';
+  supportStep='object';
+  setTimeout(()=>addBotMsg(BOT_MSGS.object(cat)[0]), 400);
+}
+
+function selectBudget(budget){
+  addUserMsg(budget);
+  document.getElementById('spQuick').innerHTML='';
+  supportStep='done';
+  const co = COUNTRIES[cc]||{n:cc,f:''};
+  setTimeout(()=>{
+    const msg = BOT_MSGS.confirm(supportCat, supportObj, supportDetails, budget, `${co.f} ${co.n}`, cu?.email||'');
+    addBotMsg(msg[0]);
+    supportTickets.push({
+      id: Date.now(),
+      user: cu?cu.name:'Visiteur',
+      email: cu?.email||'',
+      cat: supportCat,
+      obj: supportObj,
+      details: supportDetails,
+      budget,
+      country: `${co.f} ${co.n}`,
+      time: new Date().toLocaleString('fr-FR'),
+      msg: `[${supportCat}] ${supportObj}${supportDetails?' — '+supportDetails:''} | Budget: ${budget}`
+    });
+    updateInboxCount();
+    document.getElementById('spNotif').style.display='flex';
+  }, 500);
+}
+
+function sendSupport(){
+  const inp = document.getElementById('spInput');
+  const txt = inp.value.trim();
+  if(!txt) return;
+
+  if(!cu){ toast('🔒','Connecte-toi pour utiliser le chat !'); return; }
+
+  addUserMsg(txt); inp.value='';
+
+  if(supportStep==='category'){
+    selectCat(txt);
+  } else if(supportStep==='object'){
+    // Capture product name
+    supportObj = txt;
+    supportStep='details';
+    setTimeout(()=>addBotMsg(BOT_MSGS.details[0]), 400);
+    setTimeout(()=>{
+      document.getElementById('spQuick').innerHTML=
+        `<button class="sp-qbtn" onclick="skipDetails()">⏭️ Pas de préférence</button>`;
+    }, 800);
+  } else if(supportStep==='details'){
+    supportDetails = txt;
+    document.getElementById('spQuick').innerHTML='';
+    supportStep='budget';
+    setTimeout(()=>addBotMsg(BOT_MSGS.budget[0]), 400);
+    setTimeout(()=>{
+      document.getElementById('spQuick').innerHTML=
+        getBudgetOptions().map(b=>`<button class="sp-qbtn" onclick="selectBudget('${b}')">${b}</button>`).join('');
+    }, 800);
+  } else if(supportStep==='budget'){
+    selectBudget(txt);
+  } else {
+    setTimeout(()=>addBotMsg('Merci ! Notre équipe a bien reçu ton message et reviendra vers toi rapidement. 💪'), 400);
+    const co = COUNTRIES[cc]||{n:cc,f:''};
+    supportTickets.push({id:Date.now(),user:cu?cu.name:'Visiteur',email:cu?.email||'',cat:'Autre',obj:txt,details:'',budget:'?',country:`${co.f} ${co.n}`,time:new Date().toLocaleString('fr-FR'),msg:txt});
+    updateInboxCount();
+  }
+}
+
+function skipDetails(){
+  supportDetails='Pas de préférence';
+  document.getElementById('spQuick').innerHTML='';
+  addUserMsg('Pas de préférence');
+  supportStep='budget';
+  setTimeout(()=>addBotMsg(BOT_MSGS.budget[0]), 400);
+  setTimeout(()=>{
+    document.getElementById('spQuick').innerHTML=
+      getBudgetOptions().map(b=>`<button class="sp-qbtn" onclick="selectBudget('${b}')">${b}</button>`).join('');
+  }, 800);
+}
+
+// ============ INBOX (admin) ============
+function updateInboxCount(){
+  const total = nlCatSubs.length + supportTickets.length;
+  const el = document.getElementById('inboxCount');
+  if(el){el.textContent=total;el.style.display=total>0?'inline':'none';}
+}
+
+function buildInbox(){
+  // Newsletter subs
+  const nlEl = document.getElementById('nlInbox');
+  if(nlCatSubs.length){
+    nlEl.innerHTML=nlCatSubs.map(s=>`
+      <div class="inbox-item">
+        <div class="inbox-meta">
+          <span class="inbox-badge nl">Newsletter</span>
+          <strong>${s.email}</strong>
+          <span>·</span><span>${s.countryFlag} ${s.countryName}</span>
+          <span>·</span><span>${s.time}</span>
+        </div>
+        <div class="inbox-text">Abonné aux deals <strong>${CAT_LABELS[s.cat]||s.cat}</strong> ${CAT_ICONS[s.cat]||''}</div>
+      </div>`).join('');
+    document.getElementById('nlSubCount').textContent=`(${nlCatSubs.length})`;
+  } else {nlEl.innerHTML=`<div class="inbox-empty">Aucun abonnement pour l'instant.</div>`;}
+
+  // Support tickets
+  const rqEl = document.getElementById('reqInbox');
+  if(supportTickets.length){
+    rqEl.innerHTML=supportTickets.map(t=>`
+      <div class="inbox-item">
+        <div class="inbox-meta">
+          <span class="inbox-badge">Demande deal</span>
+          <strong>${t.user}</strong>
+          <span>·</span><span>${t.country}</span>
+          <span>·</span><span>${t.time}</span>
+        </div>
+        ${t.email?`<div class="inbox-meta">📧 <strong>${t.email}</strong></div>`:''}
+        ${t.obj?`<div class="inbox-text">🎯 Produit : <strong>${t.obj}</strong>${t.details&&t.details!=='Pas de préférence'?` — ${t.details}`:''}</div>`:''}
+        <div class="inbox-text">${t.msg}</div>
+        <div class="inbox-meta" style="margin-top:.3rem;">
+          💰 Budget : <strong>${t.budget}</strong> &nbsp;·&nbsp; 
+          Catégorie : <strong>${t.cat}</strong>
+        </div>
+      </div>`).join('');
+    document.getElementById('reqCount').textContent=`(${supportTickets.length})`;
+  } else {rqEl.innerHTML=`<div class="inbox-empty">Aucune demande pour l'instant.</div>`;}
+}
+
+// ============ START ============
+loadPersisted();
+buildCP();
+// V5: Restore persisted session
+if(cu){ try{ navU(); }catch(e){} }
+</script>
+</body>
+</html>
