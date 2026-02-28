@@ -1905,6 +1905,7 @@ window.loginWithGoogle = async function(){
   if(btn){ btn.textContent='⏳ Connexion...'; btn.disabled=true; }
   try{
     const provider = new firebase.auth.GoogleAuthProvider();
+    // Assure que le domaine est autorisé dans Firebase Console → Authentication → Domains
     provider.addScope('email');
     provider.addScope('profile');
     const result = await _fbAuth.signInWithPopup(provider);
@@ -2094,7 +2095,7 @@ window._fbLo = async function(){
 window.resetPwd = async function(){
   if(!_fbReady){ toast('⏳','Chargement en cours...'); return; }
   const e = document.getElementById('le').value.trim();
-  if(!e){ toast('⚠️','Entre ton email d'abord'); return; }
+  if(!e){ toast('⚠️','Entre ton email'); return; }
   try{
     await _fbAuth.sendPasswordResetEmail(e);
     toast('📬','Email de réinitialisation envoyé !');
@@ -2108,7 +2109,7 @@ window.resetPwd = async function(){
 window.resendVerifEmail = async function(){
   const e = window._pendingVerifEmail;
   const p = window._pendingVerifPwd;
-  if(!e||!p){ toast('⚠️','Connecte-toi d'abord pour renvoyer l'email'); return; }
+  if(!e||!p){ toast('⚠️','Reconnecte-toi pour renvoyer l\'email'); return; }
   try{
     const cred = await _fbAuth.signInWithEmailAndPassword(e, p);
     await cred.user.sendEmailVerification();
