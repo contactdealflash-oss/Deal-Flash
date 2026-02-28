@@ -1814,5 +1814,211 @@ buildCP();
 // V5: Restore persisted session
 if(cu){ try{ navU(); }catch(e){} }
 </script>
+
+<!-- ======================================================
+     FIREBASE — stockage cloud (ajout non-destructif)
+     Toute la logique existante reste intacte.
+     Ce script se branche par-dessus les fonctions d'origine.
+     ====================================================== -->
+<script type="module">
+import { initializeApp }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+         signOut, onAuthStateChanged, sendEmailVerification, updateProfile }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, collection, doc, addDoc, setDoc, getDoc, getDocs,
+         deleteDoc, serverTimestamp, query, orderBy }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+// ── Config ────────────────────────────────────────────────────────────────
+const firebaseConfig = {
+  apiKey: "AIzaSyBvXqQEUEF9h7FGiA47qfWfw1XJAnooWDQ",
+  authDomain: "deal-flash-67612.firebaseapp.com",
+  projectId: "deal-flash-67612",
+  storageBucket: "deal-flash-67612.firebasestorage.app",
+  messagingSenderId: "865251620345",
+  appId: "1:865251620345:web:c0d0e7496d31f914ffb928"
+};
+const fbApp = initializeApp(firebaseConfig);
+const auth  = getAuth(fbApp);
+const db    = getFirestore(fbApp);
+
+// ── 1. AUTHENTIFICATION ───────────────────────────────────────────────────
+// Remplace login() par Firebase Auth
+
+window.login = async function(){
+  const e = document.getElementById('le').value.trim();
+  const p = document.getElementById('lp').value;
+  if(!e||!p){ toast('⚠️','Remplis tous les champs'); return; }
+  try {
+    const cred = await signInWithEmailAndPassword(auth, e, p);
+    const user = cred.user;
+    if(!user.emailVerified){
+      await signOut(auth);
+      toast('⚠️','Vérifie ton email avant de te connecter.');
+      return;
+    }
+    const snap = await getDoc(doc(db,'users',user.uid));
+    cu = snap.exists()
+      ? { ...snap.data(), uid:user.uid }
+      : { name:user.displayName||e.split('@')[0], email:e, uid:user.uid, isAdmin:false };
+    persistUser(); navU(); cm('lm');
+    toast('👋',`Bienvenue ${cu.name} !`); render(cf);
+  } catch(err){
+    const msgs = {
+      'auth/invalid-credential' : 'Email ou mot de passe incorrect.',
+      'auth/user-not-found'     : 'Aucun compte avec cet email.',
+      'auth/wrong-password'     : 'Mot de passe incorrect.',
+      'auth/too-many-requests'  : 'Trop de tentatives. Réessaie plus tard.'
+    };
+    toast('❌', msgs[err.code]||err.message);
+  }
+};
+
+// Remplace reg() par Firebase Auth
+window.reg = async function(){
+  const n  = document.getElementById('rn').value.trim();
+  const e  = document.getElementById('re').value.trim();
+  const p  = document.getElementById('rp').value;
+  const p2 = document.getElementById('rp2') ? document.getElementById('rp2').value : p;
+  if(!n||!e||!p){ toast('⚠️','Remplis tous les champs'); return; }
+  if(p.length<6){ toast('⚠️','Mot de passe : 6 caractères minimum'); return; }
+  if(p!==p2){ toast('⚠️','Les mots de passe ne correspondent pas'); return; }
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, e, p);
+    await updateProfile(cred.user, { displayName:n });
+    await sendEmailVerification(cred.user);
+    await setDoc(doc(db,'users',cred.user.uid),
+      { name:n, email:e, isAdmin:false, createdAt:serverTimestamp(), country:cc||'fr' });
+    await signOut(auth);
+    cm('rm');
+    toast('📬','Email de vérification envoyé ! Clique sur le lien puis connecte-toi.');
+  } catch(err){
+    const msgs = {
+      'auth/email-already-in-use': 'Email déjà utilisé.',
+      'auth/invalid-email'       : 'Email invalide.',
+      'auth/weak-password'       : 'Mot de passe trop faible.'
+    };
+    toast('❌', msgs[err.code]||err.message);
+  }
+};
+
+// Remplace lo() par Firebase Auth
+window.lo = async function(){
+  try{ await signOut(auth); }catch(e){}
+  cu = null; persistUser();
+  document.getElementById('nrl').style.display='flex';
+  document.getElementById('un').classList.add('hidden');
+  document.getElementById('aw').classList.add('hidden');
+  document.getElementById('spNotif').style.display='none';
+  toast('👋','À bientôt !'); render(cf);
+};
+
+// Reconnexion automatique au rechargement de page
+onAuthStateChanged(auth, async (user) => {
+  if(user && user.emailVerified && !cu){
+    try{
+      const snap = await getDoc(doc(db,'users',user.uid));
+      cu = snap.exists()
+        ? { ...snap.data(), uid:user.uid }
+        : { name:user.displayName||user.email.split('@')[0], email:user.email, uid:user.uid, isAdmin:false };
+      persistUser();
+      try{ navU(); }catch(e){}
+    }catch(e){}
+  }
+});
+
+// ── 2. DEALS — charge depuis Firestore ────────────────────────────────────
+async function loadDealsFromFirestore(){
+  try{
+    const timeout = new Promise((_,rej)=>setTimeout(()=>rej(new Error('timeout')),5000));
+    const snap = await Promise.race([
+      getDocs(query(collection(db,'deals'), orderBy('createdAt','desc'))),
+      timeout
+    ]);
+    if(!snap.empty){
+      const fbDeals = [];
+      snap.forEach(d => {
+        const data = d.data();
+        fbDeals.push({ id:d.id, ...data, liked:false,
+          lk:data.lk||0, ts:data.ts||Date.now(),
+          expiry:data.expiry||(Date.now()+72*3600000) });
+      });
+      // Garde les deals locaux non-présents dans Firebase (démo/fallback)
+      const fbIds = new Set(fbDeals.map(d=>String(d.id)));
+      deals = [...fbDeals, ...deals.filter(d=>!fbIds.has(String(d.id)))];
+      if(cc){ render(cf); renderTop(); updStats(); }
+    }
+  }catch(err){ console.warn('Firestore load:', err.message); }
+}
+
+// ── 3. DEALS — sauvegarde dans Firestore quand l'admin publie ─────────────
+const _origAddD = window.addD;
+window.addD = async function(){
+  const t   = document.getElementById('at').value.trim();
+  const n   = parseFloat(document.getElementById('anp').value);
+  const o   = parseFloat(document.getElementById('aop').value);
+  const s   = document.getElementById('as').value.trim();
+  const l   = document.getElementById('al').value||'#';
+  const img = document.getElementById('aimg').value||'';
+  const cat = document.getElementById('ac').value;
+  const b   = document.getElementById('ab').value;
+  const co  = document.getElementById('aco').value;
+  if(!t||!n||!o||!s){ toast('⚠️','Remplis les champs obligatoires'); return; }
+  try{
+    const dealData = { t,cat,n,o,img,s,l,b, lk:0, co, ts:Date.now(), createdAt:serverTimestamp() };
+    const ref = await addDoc(collection(db,'deals'), dealData);
+    deals.unshift({ id:ref.id, ...dealData, liked:false, expiry:Date.now()+72*3600000 });
+    if(co===cc) render(cf);
+    renderTop(); updStats();
+    toast('✅',`Publié pour ${COUNTRIES[co]?.f||''} ${COUNTRIES[co]?.n||co} !`);
+    ['at','anp','aop','as','al','aimg'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('imgPrev').style.display='none';
+  }catch(err){ toast('❌','Erreur : '+err.message); }
+};
+
+// ── 4. DEALS — suppression dans Firestore ────────────────────────────────
+const _origDelDeal = window.delDeal;
+window.delDeal = function(id, e){
+  _origDelDeal(id, e);
+  // Supprime aussi dans Firestore si c'est un ID Firebase (string longue)
+  if(typeof id==='string' && id.length>10){
+    deleteDoc(doc(db,'deals',id)).catch(()=>{});
+  }
+};
+
+// ── 5. NEWSLETTER — sauvegarde les abonnements dans Firestore ─────────────
+const _origConfirmVerif = window.confirmVerif;
+window.confirmVerif = function(){
+  const prevNl  = (window.nlCatSubs||[]).length;
+  const prevSub = (window.subs||[]).length;
+  _origConfirmVerif();
+  // Abonnement catégorie
+  if((window.nlCatSubs||[]).length > prevNl){
+    const sub = window.nlCatSubs[window.nlCatSubs.length-1];
+    addDoc(collection(db,'newsletter_subs'), {...sub, createdAt:serverTimestamp()}).catch(()=>{});
+  }
+  // Abonnement général
+  if((window.subs||[]).length > prevSub && window.cu){
+    addDoc(collection(db,'newsletter_subs'),
+      { email:window.cu.email, type:'general', time:new Date().toLocaleString('fr-FR'), createdAt:serverTimestamp() }
+    ).catch(()=>{});
+  }
+};
+
+// ── 6. SUPPORT — sauvegarde les tickets dans Firestore ───────────────────
+const _origSelectBudget = window.selectBudget;
+window.selectBudget = function(budget){
+  const prevLen = (window.supportTickets||[]).length;
+  _origSelectBudget(budget);
+  if((window.supportTickets||[]).length > prevLen){
+    const ticket = window.supportTickets[window.supportTickets.length-1];
+    addDoc(collection(db,'support_tickets'), {...ticket, createdAt:serverTimestamp()}).catch(()=>{});
+  }
+};
+
+// ── Démarrage ─────────────────────────────────────────────────────────────
+loadDealsFromFirestore();
+</script>
 </body>
 </html>
