@@ -1214,19 +1214,17 @@ function delDeal(id,e){
 }
 
 // ============ AUTH ============
-function login(){
-  const e=document.getElementById('le').value,p=document.getElementById('lp').value;
-  const u=users.find(x=>x.email===e&&x.password===p);
-  if(!u){toast('❌','Email ou mot de passe incorrect');return;}
-  cu=u;persistUser();navU();cm('lm');toast('👋',`Bienvenue ${u.name} !`);render(cf);
-}
+// login() remplacée par Firebase (voir script module en bas de page)
 function reg(){
-  const n=document.getElementById('rn').value,e=document.getElementById('re').value,p=document.getElementById('rp').value;
-  if(!n||!e||!p){toast('⚠️','Remplis tous les champs');return;}
-  if(users.find(u=>u.email===e)){toast('❌','Email déjà utilisé');return;}
-  const u={name:n,email:e,password:p,isAdmin:false};users.push(u);cu=u;persistUser();navU();cm('rm');toast('🎉',`Bienvenue ${n} !`);updStats();render(cf);
+  // Remplacée par Firebase (voir script module en bas de page)
+  toast('⏳','Chargement Firebase...');
 }
-function lo(){cu=null;persistUser();document.getElementById('nrl').style.display='flex';document.getElementById('un').classList.add('hidden');document.getElementById('aw').classList.add('hidden');document.getElementById('spNotif').style.display='none';toast('👋','À bientôt !');render(cf);}
+function login(){
+  // Remplacée par Firebase (voir script module en bas de page)
+  toast('⏳','Chargement Firebase...');
+}
+// lo() remplacée par Firebase
+function lo(){ if(window._fbLo) window._fbLo(); }
 function navU(){
   document.getElementById('nrl').style.display='none';
   const un=document.getElementById('un');un.classList.remove('hidden');un.style.display='flex';
@@ -1904,7 +1902,7 @@ window.reg = async function(){
 };
 
 // Remplace lo() par Firebase Auth
-window.lo = async function(){
+window._fbLo = async function(){
   try{ await signOut(auth); }catch(e){}
   cu = null; persistUser();
   document.getElementById('nrl').style.display='flex';
@@ -2019,6 +2017,117 @@ window.selectBudget = function(budget){
 
 // ── Démarrage ─────────────────────────────────────────────────────────────
 loadDealsFromFirestore();
+
+// ── 8. LIKES — synchronisés dans Firestore ───────────────────────────────
+
+async function saveLikeToFirestore(dealId, liked, newCount){
+  if(!cu) return;
+  try{
+    const likeRef = doc(db, 'likes', `${cu.uid}_${dealId}`);
+    if(liked){
+      await setDoc(likeRef, { userId:cu.uid, dealId:String(dealId), liked:true, createdAt:serverTimestamp() });
+    } else {
+      await deleteDoc(likeRef);
+    }
+    // Met à jour le compteur sur le deal dans Firestore
+    try{ await setDoc(doc(db,'deals',String(dealId)), { lk:newCount }, { merge:true }); }catch(e){}
+  } catch(e){ console.warn('Like save:', e.message); }
+}
+
+async function loadUserLikes(){
+  if(!cu || !db) return;
+  try{
+    const snap = await getDocs(collection(db,'likes'));
+    snap.forEach(d => {
+      const data = d.data();
+      if(data.userId === cu.uid){
+        const deal = deals.find(x => String(x.id) === String(data.dealId));
+        if(deal) deal.liked = true;
+      }
+    });
+    render(cf);
+  } catch(e){}
+}
+
+// Remplace lk() pour sauvegarder dans Firestore
+window.lk = function(id, e){
+  e.stopPropagation();
+  if(!cu){ toast('\uD83D\uDD12','Connecte-toi pour liker !'); return; }
+  const d = deals.find(x => String(x.id) === String(id));
+  if(!d) return;
+  d.liked = !d.liked;
+  d.lk += d.liked ? 1 : -1;
+  persistLikes();
+  render(cf); renderTop();
+  if(d.liked) toast('\u2764\uFE0F','Deal ajouté aux favoris !');
+  saveLikeToFirestore(id, d.liked, d.lk);
+};
+
+// ── 9. COMMENTAIRES — synchronisés dans Firestore ───────────────────────
+
+async function loadCommentsFromFirestore(dealId){
+  if(!db) return;
+  try{
+    const snap = await getDocs(query(collection(db,'comments'), orderBy('createdAt','asc')));
+    const fbComments = [];
+    snap.forEach(d => {
+      const data = d.data();
+      if(String(data.dealId) === String(dealId)){
+        fbComments.push({ id:d.id, user:data.user, text:data.text,
+          time:data.time, likes:data.likes||0, liked:false, uid:data.uid||'' });
+      }
+    });
+    comments[dealId] = fbComments;
+    renderComments(dealId);
+  } catch(e){ console.warn('Load comments:', e.message); }
+}
+
+// Patch openComments pour charger depuis Firestore
+const _origOpenComments = window.openComments;
+window.openComments = function(dealId, e){
+  _origOpenComments(dealId, e);
+  loadCommentsFromFirestore(dealId);
+};
+
+// Remplace postComment pour sauvegarder dans Firestore
+window.postComment = async function(){
+  if(!cu){ toast('\uD83D\uDD12','Connecte-toi pour commenter !'); return; }
+  const txt = document.getElementById('commentText').value.trim();
+  if(!txt){ toast('\u26A0\uFE0F','Ecris quelque chose !'); return; }
+  const time = new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  try{
+    const ref = await addDoc(collection(db,'comments'), {
+      dealId:String(currentDealId), user:cu.name, uid:cu.uid||'',
+      text:txt, time, likes:0, createdAt:serverTimestamp()
+    });
+    if(!comments[currentDealId]) comments[currentDealId] = [];
+    comments[currentDealId].push({ id:ref.id, user:cu.name, text:txt, time, likes:0, liked:false });
+    document.getElementById('commentText').value = '';
+    renderComments(currentDealId);
+    render(cf);
+    toast('\uD83D\uDCAC','Commentaire publié !');
+  } catch(err){ toast('\u274C','Erreur : '+err.message); }
+};
+
+// Remplace likeComment pour sauvegarder dans Firestore
+window.likeComment = async function(dealId, cmtId){
+  if(!cu){ toast('\uD83D\uDD12','Connecte-toi !'); return; }
+  const c = (comments[dealId]||[]).find(x => String(x.id) === String(cmtId));
+  if(!c) return;
+  c.liked = !c.liked;
+  c.likes += c.liked ? 1 : -1;
+  renderComments(dealId);
+  try{ await setDoc(doc(db,'comments',String(cmtId)), { likes:c.likes }, { merge:true }); }catch(e){}
+};
+
+// Charge les likes utilisateur après connexion Firebase
+const _origOnAuth = window._onAuthDone;
+onAuthStateChanged(auth, async (user) => {
+  if(user && user.emailVerified){
+    setTimeout(() => loadUserLikes(), 800);
+  }
+});
+
 </script>
 </body>
 </html>
